@@ -1,21 +1,28 @@
 import React from "react";
-import { Pressable, Text } from "native-base";
+import { Text, TouchableOpacity } from "react-native";
 
 const Button = (props) => {
   return (
-    <Pressable
-      bg={'#FFEEDC'}
-      p={'15px'}
-      alignItems="center"
-      borderRadius={30}
-      onPress={props.onPress}>
+    <TouchableOpacity
+      style={{
+        backgroundColor: "#F15A24",
+        padding: 8,
+        alignItems: "center",
+        borderRadius: 30,
+        width: 200,
+      }}
+      onPress={props.onPress} // Mengganti "press" menjadi "onPress"
+    >
       <Text
-        fontSize={'16px'}
-        textTransform="uppercase"
-        fontWeight="bold">
+        style={{
+          fontSize: 20,
+          fontWeight: "bold",
+          color: "white",
+        }}
+      >
         {props.text}
       </Text>
-    </Pressable>
+    </TouchableOpacity>
   );
 };
 
