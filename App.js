@@ -13,6 +13,7 @@ import Welcome from "./screens/welcome";
 import { TouchableOpacity } from "react-native";
 import View from "native-base/src/theme/components/view";
 import { Header } from "./components";
+import Review from "./screens/review";
 
 // Navigator Declaration
 const Stack = createNativeStackNavigator();
@@ -42,6 +43,9 @@ const Tabs = () => {
             case "BMI":
               iconName = "calculator-outline";
               break;
+            case "Review":
+              iconName = "book-outline";
+              break;
           }
           return (
             <Ionicons
@@ -55,8 +59,8 @@ const Tabs = () => {
         tabBarStyle: {
           position: 'absolute',
           bottom: 15,
-          left: 20,
-          right: 20,
+          left: 10,
+          right: 10,
           elevation: 0,
           borderRadius: 15,
           height: 80,
@@ -78,6 +82,7 @@ const Tabs = () => {
       <Tab.Screen name="Write" component={Write} options={noHead} />
       <Tab.Screen name="Category" component={Category} options={noHead} />
       <Tab.Screen name="BMI" component={Calculator} options={noHead} />
+      <Tab.Screen name="Review" component={Review} options={noHead} />
     </Tab.Navigator>
   );
 };

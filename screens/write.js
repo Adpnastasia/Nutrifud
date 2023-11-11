@@ -1,68 +1,150 @@
+// Form pengisian resep makanan baru
+
 import React from "react";
 import {
-  Input,
+  NativeBaseProvider,
+  Box,
+  FormControl,
+  Center,
   Stack,
   TextArea,
-  FormControl,
-  View,
-  Text,
+  Input,
+  Heading,
   Button,
-  Container,
-  Center,
-  Box,
-  Flex,
-  Spacer,
+  Pressable,
+  Modal,
+  Text,
+  Image,
+  safeArea
 } from "native-base";
-import { useNavigation } from "@react-navigation/native";
+import { useState } from "react";
 
-export const FormExample = () => {
+const Write = () => {
+  const [KirimSelesaiAwal, KirimSelesaiSetelah] = useState(false);
+
   return (
-    <Box
-      flex={1}
-      p={4}
-      alignItems={"center"}
-      justifyContent={"center"}
-      bg={"white"}
-    >
-      <FormControl alignItems={"center"}>
-        <Stack space={10}>
-          <Stack>
-            <FormControl.Label>Nama</FormControl.Label>
-            <Input variant="underlined" p={2} placeholder="Nama Resep" />
-          </Stack>
-          <Stack>
-            <FormControl.Label>Bahan</FormControl.Label>
-            <TextArea
-              h={20}
-              placeholder="Bahan - bahan yang diperlukan"
-              w="100%"
-              maxW="100%"
-            />
-          </Stack>
-          <Stack>
-            <FormControl.Label>Cara Pembuatan</FormControl.Label>
-            <TextArea
-              h={20}
-              placeholder="Cara pembuatan"
-              w="100%"
-              maxW="100%"
-            />
-          </Stack>
-        </Stack>
-      </FormControl>
+    <NativeBaseProvider>
+      <Box flex={1} bg={"#FFEEDC"}>
+        <Center>
+          <Box width="80%" safeArea>
+            <FormControl bg="primary.50" p={5} rounded="md" mt={"25"}>
+              <Stack space={4}>
+                <FormControl.Label
+                  fontSize="xl"
+                  color="white"
+                  textAlign="center"
+                  _text={{
+                    fontWeight: "bold",
+                  }}
+                >
+                  Nama Resep
+                </FormControl.Label>
+                <Input
+                  variant="filled"
+                  placeholder="Masukkan Nama Resep"
+                  bg="orange.100"
+                />
+              </Stack>
+              <Stack space={4} mt={5}>
+                <FormControl.Label
+                  fontSize="xl"
+                  color="white"
+                  textAlign="center"
+                  _text={{
+                    fontWeight: "bold",
+                  }}
+                >
+                  Bahan - bahan
+                </FormControl.Label>
+                <TextArea
+                  variant="filled"
+                  placeholder="Masukkan Bahan-bahan"
+                  bg="orange.100"
+                />
+              </Stack>
+              <Stack space={4} mt={5}>
+                <FormControl.Label
+                  fontSize="xl"
+                  color="white"
+                  textAlign="center"
+                  _text={{
+                    fontWeight: "bold",
+                  }}
+                >
+                  Cara pembuatan
+                </FormControl.Label>
+                <TextArea
+                  variant="filled"
+                  h={40}
+                  placeholder="Masukkan Cara Pembuatan"
+                  bg="orange.100"
+                />
+              </Stack>
+              <Button onPress={() => KirimSelesaiSetelah(true)} mt={"10"} bg={'orange.400'}>
+                Kirim
+              </Button>
+              <Modal
+                isOpen={KirimSelesaiAwal}
+                onClose={() => KirimSelesaiSetelah(false)}
+              >
+                <Modal.Content h={"40%"} bg={"#FFEEDC"} w={'90%'}>
+                  <Modal.Body alignSelf={"center"} mt={"20%"} rounded={"md"}>
+                    <Image
+                      source={require("../assets/checklist.png")}
+                      size={"md"}
 
-      <Button
-        bg={"#FFEEDC"}
-        m={"10"}
-        borderRadius={"lg"}
-        size={"lg"}
-        maxHeight={"full"}
-        maxWidth={"full"}
-      >
-        <Text>Kirim</Text>
-      </Button>
-    </Box>
+                      alignSelf={'center'}
+                    />
+                    <Text fontSize={'md'}>Terima Kasih! Resepmu berhasil ditambahkan</Text>
+                  </Modal.Body>
+                  <Modal.Footer justifyContent={"center"} bg={'orange.400'}>
+                    <Button.Group>
+                      <Button
+                        variant='ghost'
+                        colorScheme='white'
+                        onPress={() => {
+                          KirimSelesaiSetelah(false);
+                        }}
+                      >
+                        Tutup
+                      </Button>
+                    </Button.Group>
+                  </Modal.Footer>
+                </Modal.Content>
+              </Modal>
+            </FormControl>
+          </Box>
+        </Center>
+      </Box>
+    </NativeBaseProvider>
   );
 };
 
-export default FormExample;
+export default Write;
+
+// import React from "react";
+// import { NativeBaseProvider, Text, Box, HStack, Center, Pressable} from "native-base";
+// import { useNavigation } from "@react-navigation/native";
+
+// const Write = () => {
+//   const navigation = useNavigation();
+
+//   return (
+//     <NativeBaseProvider>
+//       <Center bg={'green.700'} alignSelf={'center'} w={'100%'} flex={1}>
+//         <Pressable onPress={() => navigation.navigate("Input")}>
+//           <HStack bg={'red.800'} w={'50%'} h={'64'}>
+//             <Text textAlign={'center'}>Screen 1</Text>
+//           </HStack>
+//         </Pressable>
+//         <Pressable onPress={() => navigation.navigate("Category")}>
+//           <HStack bg={'blue.800'} w={'50%'} h={'64'}>
+//             <Text textAlign={'center'}>Screen 2</Text>
+//           </HStack>
+//         </Pressable>
+//       </Center>
+//     </NativeBaseProvider>
+//   );
+// };
+
+// export default Write;
