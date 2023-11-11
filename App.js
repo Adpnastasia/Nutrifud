@@ -6,10 +6,11 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import Home from "./screens/home";
 import Bookmark from "./screens/bookmark";
 import Calculator from "./screens/calculator";
-import Category from "./screens/category";
+import Category from "./screens/kategori";
 import Recipe from "./screens/recipe";
 import Write from "./screens/write";
 import Welcome from "./screens/welcome";
+import DetailKategori from "./screens/detailKategori";
 import { TouchableOpacity } from "react-native";
 import View from "native-base/src/theme/components/view";
 import { Header } from "./components";
@@ -94,6 +95,7 @@ const App = () => {
                   component={Recipe}
                   options={noHead}
                 />
+                <Stack.Screen name="DetailKategori" component={DetailKategori} options={noHead} />
             </Stack.Navigator>
         </NavigationContainer>
     </NativeBaseProvider>
