@@ -13,7 +13,7 @@ import {
 } from 'native-base';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const Calculator = () => {
+const Kalkulator = () => {
   const [tinggi, setTinggi] = useState('');
   const [berat, setBerat] = useState('');
   const [kategoriBMI, setKategoriBMI] = useState('');
@@ -26,7 +26,7 @@ const Calculator = () => {
       const kategori = hasilKategoriBMI(bmi);
   
       setHasil(bmi);
-      setKategoriBMI(kategori); // Remove .category here
+      setKategoriBMI(kategori); 
     }
   };  
 
@@ -55,7 +55,7 @@ const Calculator = () => {
               <Box p={4} bg='white'>
                 <Center>
                   <Heading mb={4} color='#ED7D31'>
-                    BMI Calculator
+                    BMI Kalkulator
                   </Heading>
                 </Center>
                 <FormControl>
@@ -87,7 +87,7 @@ const Calculator = () => {
                     borderRadius={15}
                     height={46}
                   >
-                    <Text color='white'>Calculate BMI</Text>
+                    <Text color='white'>Hitung BMI</Text>
                   </Button>
                   <Button
                     onPress={resetFields}
@@ -123,4 +123,4 @@ const Calculator = () => {
   );
 };
 
-export default Calculator;
+export default Kalkulator;

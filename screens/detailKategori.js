@@ -1,11 +1,10 @@
 import React from 'react';
-import { Text, FlatList, Image, Box, VStack, Spacer } from 'native-base';
+import { Text, FlatList, Image, Box, VStack } from 'native-base';
 import datas from '../datas/datas';
 
-const RecipesByCategory = ({ route }) => {
+const DetailKategori = ({ route }) => {
   const { kategori } = route.params;
 
-  // Filter recipes based on the selected category
   const filteredRecipes = datas.filter((recipe) => recipe.kategori.includes(kategori));
 
   return (
@@ -42,4 +41,4 @@ const RecipesByCategory = ({ route }) => {
   );
 };
 
-export default RecipesByCategory;
+export default DetailKategori;

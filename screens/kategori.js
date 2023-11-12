@@ -1,9 +1,8 @@
 import React from "react";
-import { Heading, Image, Text, FlatList, Box, Button } from "native-base";
+import { Image, Text, FlatList, Box } from "native-base";
 import { TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import kategori from "../datas/kategori";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 const Kategori = () => {
   const navigation = useNavigation();
@@ -16,8 +15,8 @@ const Kategori = () => {
     return (
       <TouchableOpacity onPress={() => navigateToDetailKategori(item.kategori)}>
         <Box
-          width={165} // Set fixed width for each card
-          height={210} // Set fixed height for each card
+          width={165} 
+          height={210} 
           margin={2}
           borderRadius="md"
           overflow="hidden"
@@ -28,7 +27,7 @@ const Kategori = () => {
             source={{ uri: item.image }}
             alt="Image Data"
             resizeMode="cover"
-            height={150} // Set fixed height for each image
+            height={150} 
           />
           <Box padding={4} bg="white" borderColor="#D3B292" borderWidth={1}>
             <Text color="gray.800" fontWeight="bold" fontSize="md" marginBottom={2}>
