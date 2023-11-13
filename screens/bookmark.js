@@ -64,43 +64,6 @@ const Bookmark = () => {
 
   return (
     <SafeAreaView>
-      <Box>
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-          {datas.slice(14).map((item, index) => {
-            return (
-              <Pressable
-                activeOpacity={0.5}
-                key={index}
-              >
-                <Box w={"48"} mr={"4"} ml={index == 0 ? "4" : "0"}>
-                  <Image
-                    source={{ uri: item.image }}
-                    w="full"
-                    h="24"
-                    alt="Image Data"
-                    mb={"2"}
-                  />
-                  <Text fontSize={"xs"} color="light.300">
-                    {item.date}
-                  </Text>
-                  <Heading
-                    fontSize={"sm"}
-                    lineHeight={"xs"}
-                    ellipsizeMode="tail"
-                    numberOfLines={2}
-                    color="light.50"
-                  >
-                    {item.title}
-                  </Heading>
-                  <Pressable onPress={() => toggleLove(item.id)}>
-                    <Text>{isLoved(item.id) ? '❤️ Disukai' : '🤍 Sukai'}</Text>
-                  </Pressable>
-                </Box>
-              </Pressable>
-            );
-          })}
-        </ScrollView>
-      </Box>
       <FlatList
         data={datas}
         renderItem={renderitem}

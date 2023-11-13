@@ -122,29 +122,4 @@ const Write = () => {
 
 export default Write;
 
-// import React from "react";
-// import { NativeBaseProvider, Text, Box, HStack, Center, Pressable} from "native-base";
-// import { useNavigation } from "@react-navigation/native";
 
-// const Write = () => {
-//   const navigation = useNavigation();
-
-//   return (
-//     <NativeBaseProvider>
-//       <Center bg={'green.700'} alignSelf={'center'} w={'100%'} flex={1}>
-//         <Pressable onPress={() => navigation.navigate("Input")}>
-//           <HStack bg={'red.800'} w={'50%'} h={'64'}>
-//             <Text textAlign={'center'}>Screen 1</Text>
-//           </HStack>
-//         </Pressable>
-//         <Pressable onPress={() => navigation.navigate("Category")}>
-//           <HStack bg={'blue.800'} w={'50%'} h={'64'}>
-//             <Text textAlign={'center'}>Screen 2</Text>
-//           </HStack>
-//         </Pressable>
-//       </Center>
-//     </NativeBaseProvider>
-//   );
-// };
-
-// export default Write;
