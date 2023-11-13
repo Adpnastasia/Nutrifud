@@ -1,10 +1,10 @@
 import React from "react";
 import { ImageBackground } from "react-native";
-import { View, Heading, Image } from "native-base";
+import { View, Heading, Image, Box } from "native-base";
 import { useNavigation } from "@react-navigation/native";
 import Button from "../components/button";
 
-function Welcome() {
+const Welcome = () => {
   const navigation = useNavigation();
 
   return (
@@ -32,7 +32,8 @@ function Welcome() {
           h="200"
           alt="Logo Icon"
         />
-        <View
+
+        <Box
           style={{
             position: "absolute",
             bottom: 70,
@@ -40,14 +41,17 @@ function Welcome() {
             alignItems: "center",
           }}
         >
+          
           <Button
             text="Let's Cook!"
             onPress={() => navigation.navigate('Tabs')}
           />
-        </View>
+        </Box>
       </View>
     </ImageBackground>
   );
 }
 
 export default Welcome;
+
+

@@ -10,9 +10,6 @@ import Category from "./screens/category";
 import Recipe from "./screens/recipe";
 import Write from "./screens/write";
 import Welcome from "./screens/welcome";
-import { TouchableOpacity } from "react-native";
-import View from "native-base/src/theme/components/view";
-import Header from "./components/header";
 
 // Navigator Declaration
 const Stack = createNativeStackNavigator();
