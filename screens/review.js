@@ -38,7 +38,6 @@ const List = () => {
                 {item.title}
               </Heading>
               <Text>{item.description}</Text>
-              <Pressable onPress={() => toggleLove(item.id)}></Pressable>
             </Box>
           </Box>
         </Pressable>
