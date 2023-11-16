@@ -11,7 +11,7 @@ const Button = (props) => {
         borderRadius: 30,
         width: 200,
       }}
-      onPress={props.onPress} // Mengganti "press" menjadi "onPress"
+      onPress={props.onPress}
     >
       <Text
         style={{
