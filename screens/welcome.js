@@ -1,32 +1,57 @@
-import { Heading, Center, Image, TouchableOpacity, Text } from "native-base";
+import React from "react";
+import { ImageBackground } from "react-native";
+import { View, Heading, Image, Box } from "native-base";
 import { useNavigation } from "@react-navigation/native";
 import Button from "../components/button";
 
-const Welcome = ({ navigation }) => {
-    return (
-    <>
-        <Image
-              source={require("../assets/Welcome.png")}
-              alt="Background"
-              resizeMode="cover"
-              position= "absolute"
-              w="100%"
-              h="100%"
-        />
-        <TouchableOpacity
-          onPress={() => navigation.navigate("Home")}
+const Welcome = () => {
+  const navigation = useNavigation();
+
+  return (
+    <ImageBackground
+      source={require("../assets/Welcome.png")}
+      style={{ flex: 1 }}
+    >
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <Heading
           style={{
-            backgroundColor: "#F15A24",
-            padding: 10,
-            borderRadius: 5,
-            marginTop: 30,
-            width: "100%",
+            bottom: 30,
+            color: "white",
+            letterSpacing: 4, // Menambahkan jarak antar huruf
+            textShadowColor: "#262422", // Warna shadow
+            textShadowOffset: { width: 3, height: 3 }, // Offset shadow
+            textShadowRadius: 5, // Radius shadow
           }}
         >
-          <Text color="white">Get Started</Text>
-        </TouchableOpacity>
-    </>
-    );
-  };
+          NUTRIFUD
+        </Heading>
+
+        <Image
+          source={require("../assets/Logo.png")}
+          w="200"
+          h="200"
+          alt="Logo Icon"
+        />
+
+        <Box
+          style={{
+            position: "absolute",
+            bottom: 70,
+            width: "100%",
+            alignItems: "center",
+          }}
+        >
+          
+          <Button
+            text="Let's Cook!"
+            onPress={() => navigation.navigate('Tabs')}
+          />
+        </Box>
+      </View>
+    </ImageBackground>
+  );
+}
 
 export default Welcome;
+
+
