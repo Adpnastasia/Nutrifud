@@ -6,10 +6,17 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import Home from "./screens/home";
 import Bookmark from "./screens/bookmark";
 import Calculator from "./screens/calculator";
-import Category from "./screens/category";
+import Category from "./screens/kategori";
 import Recipe from "./screens/recipe";
 import Write from "./screens/write";
 import Welcome from "./screens/welcome";
+
+import DetailKategori from "./screens/detailKategori";
+import { TouchableOpacity } from "react-native";
+import View from "native-base/src/theme/components/view";
+import { Header } from "./components";
+
+
 
 // Navigator Declaration
 const Stack = createNativeStackNavigator();
@@ -83,9 +90,19 @@ const App = () => {
     <NativeBaseProvider>
         <NavigationContainer>
             <Stack.Navigator>
+
+                <Stack.Screen name="Tabs" component={Tabs} options={noHead} />
+                <Stack.Screen              
+                  name="Recipe"
+                  component={Recipe}
+                  options={noHead}
+                />
+                <Stack.Screen name="DetailKategori" component={DetailKategori} options={noHead} />
+
               <Stack.Screen name="Welcome" component={Welcome} options={noHead}/>
               <Stack.Screen name="Tabs" component={Tabs} options={noHead} />
               <Stack.Screen name="Recipe" component={Recipe} options={noHead}/>
+
             </Stack.Navigator>
         </NavigationContainer>
     </NativeBaseProvider>
