@@ -10,13 +10,9 @@ import Category from "./screens/kategori";
 import Recipe from "./screens/recipe";
 import Write from "./screens/write";
 import Welcome from "./screens/welcome";
-
 import DetailKategori from "./screens/detailKategori";
-import { TouchableOpacity } from "react-native";
-import View from "native-base/src/theme/components/view";
-import { Header } from "./components";
-
-
+import Review from "./screens/review";
+import React from "react";
 
 // Navigator Declaration
 const Stack = createNativeStackNavigator();
@@ -46,6 +42,11 @@ const Tabs = () => {
             case "BMI":
               iconName = "calculator-outline";
               break;
+            case "Review":
+              iconName = "book-outline";
+              break;
+            default:
+              iconName = "help-circle-outline";
           }
           return (
             <Ionicons
@@ -59,18 +60,23 @@ const Tabs = () => {
         tabBarStyle: {
           position: 'absolute',
           bottom: 15,
-          left: 20,
-          right: 20,
+          left: 10,
+          right: 10,
           elevation: 0,
           borderRadius: 15,
           height: 80,
           shadowColor: '#F15A24',
           elevation: 4,
         },
+        tabBarLabelStyle: {
+          marginBottom: 3,
+        },
         tabBarLabel: ({ children, color, focused }) => {
           return (
-            <Text 
-              color={focused ? "#F15A24" : color} mb={3}>
+            <Text
+              color={focused ? "#F15A24" : color}
+              style={{ marginBottom: 3 }}
+            >
               {children}
             </Text>
           );
@@ -82,6 +88,7 @@ const Tabs = () => {
       <Tab.Screen name="Write" component={Write} options={noHead} />
       <Tab.Screen name="Category" component={Category} options={noHead} />
       <Tab.Screen name="BMI" component={Calculator} options={noHead} />
+      <Tab.Screen name="Review" component={Review} options={noHead} />
     </Tab.Navigator>
   );
 };
@@ -89,23 +96,18 @@ const Tabs = () => {
 const App = () => {
   return (
     <NativeBaseProvider>
-        <NavigationContainer>
-            <Stack.Navigator>
-
-                <Stack.Screen name="Tabs" component={Tabs} options={noHead} />
-                <Stack.Screen              
-                  name="Recipe"
-                  component={Recipe}
-                  options={noHead}
-                />
-                <Stack.Screen name="DetailKategori" component={DetailKategori} options={noHead} />
-
-              <Stack.Screen name="Welcome" component={Welcome} options={noHead}/>
-              <Stack.Screen name="Tabs" component={Tabs} options={noHead} />
-              <Stack.Screen name="Recipe" component={Recipe} options={noHead}/>
-
-            </Stack.Navigator>
-        </NavigationContainer>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Welcome" component={Welcome} options={noHead} />
+          <Stack.Screen name="Tabs" component={Tabs} options={noHead} />
+          <Stack.Screen name="Recipe" component={Recipe} options={noHead} />
+          <Stack.Screen
+            name="DetailKategori"
+            component={DetailKategori}
+            options={noHead}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
     </NativeBaseProvider>
   );
 };

@@ -6,10 +6,6 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 
 const Header = ({ withBack = false }) => {
   const navigation = useNavigation();
-
-
-
-
   const windowWidth = Dimensions.get('window').width;
   const windowHeight = Dimensions.get('window').height;
 
