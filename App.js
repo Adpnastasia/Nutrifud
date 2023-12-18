@@ -57,10 +57,10 @@ const Tabs = () => {
         },
         tabBarIconStyle: { marginTop: 10 },
         tabBarStyle: {
-          // position: 'absolute',
-          // bottom: 15,
-          // left: 10,
-          // right: 10,
+          position: 'absolute',
+          bottom: 15,
+          left: 10,
+          right: 10,
           elevation: 0,
           borderRadius: 15,
           height: 80,
@@ -94,6 +94,7 @@ const App = () => {
           <Header></Header>
             <Stack.Navigator>
                 <Stack.Screen name="Tabs" component={Tabs} options={noHead} />
+                <Stack.Screen name="Review" component={Tabs} options={noHead} />
             </Stack.Navigator>
         </NavigationContainer>
     </NativeBaseProvider>

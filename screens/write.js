@@ -1,5 +1,3 @@
-// Form pengisian resep makanan baru
-
 import React from "react";
 import {
   NativeBaseProvider,
@@ -26,7 +24,7 @@ const Write = () => {
     <NativeBaseProvider>
       <Box flex={1} bg={"#FFEEDC"}>
         <Center>
-          <Box width="80%" safeArea>
+          <Box width="80%">
             <FormControl bg="primary.50" p={5} rounded="md" mt={"25"}>
               <Stack space={4}>
                 <FormControl.Label

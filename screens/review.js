@@ -16,7 +16,7 @@ const List = () => {
   const renderItem = ({ item }) => {
     return (
       <NativeBaseProvider>
-        <Pressable bg={"#FFEEDC"} flex={1} activeOpacity={0.5}>
+        <Box bg={"green.500"} flex={1}>
           <Box
             bg={"white"}
             p={"5"}
@@ -40,7 +40,7 @@ const List = () => {
               <Text>{item.description}</Text>
             </Box>
           </Box>
-        </Pressable>
+        </Box>
       </NativeBaseProvider>
     );
   };

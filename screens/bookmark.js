@@ -8,71 +8,76 @@ import {
   Pressable,
   Box,
   ScrollView,
+  IconButton,
+  Icon,
+  Entypo,
+  Button,
+  HStack,
+  VStack,
 } from "native-base";
 import datas from "../datas";
 import { SafeAreaView } from 'react-native';
+import Ionicons from "@expo/vector-icons/Ionicons"
+import { useNavigation } from '@react-navigation/native';
 
 const Bookmark = () => {
-  const [bookmarkSebelumLove, bookmarkSetelahLove] = useState([]);
+  const navigation = useNavigation();
 
-  const toggleLove = (itemId) => {
-    if (bookmarkSebelumLove.includes(itemId)) {
-      bookmarkSetelahLove(bookmarkSebelumLove.filter(id => id !== itemId));
-    } else {
-      bookmarkSetelahLove([...bookmarkSebelumLove, itemId]);
-    }
+  const navigateToReview = (selectedRecipe) => {
+    navigation.navigate('review', { datas });
   };
-
-  const isLoved = (itemId) => bookmarkSebelumLove.includes(itemId);
 
   const renderitem = ({ item }) => {
     return (
-      <NativeBaseProvider>
-          <Pressable 
-            bg={"#FFEEDC"}
-            flex={1}
-            activeOpacity={0.5}
-          >
-            <Box bg={'white'}
-              p={'5'}
-              borderBottomColor={"orange.400"}
-              borderBottomWidth={1}
-              flexDirection="row"
-              flex={1}
-            >
-              <Box flex={1} mr={'5'}>
-                <Image
-                  source={{ uri: item.image }}
-                  w="full"
-                  h="full"
-                  alt="Image Data"
-                />
-              </Box>
-              <Box flex={1.8}>
+      <Box bg={'#FFEEDC'}
+        p={'5'}
+        borderBottomColor={"orange.400"}
+        borderBottomWidth={1}
+        flexDirection="row"
+      >
+        <Box flex={1} mr={'5'}>
+          <Image
+            source={{ uri: item.image }}
+            w="100"
+            h="50"
+            alt="Image Data"
+            borderRadius={'xl'}
+          />
+        </Box>
+        <Box flex={2} justifyContent={'flex-end'}>
+          {/* <HStack bg={'warning.700'}> */}
+          <Box>
+            <VStack>
+              <HStack justifyContent={'flex-end'}>
                 <Heading lineHeight={"md"} fontSize={"md"}>
                   {item.title}
                 </Heading>
-                <Pressable onPress={() => toggleLove(item.id)}>
-                  <Text>{isLoved(item.id) ? '❤️ Disukai' : '🤍 Sukai'}</Text>
-                </Pressable>
-              </Box>
-            </Box>
-          </Pressable>
-      </NativeBaseProvider>
+                {/* <Text>❤️</Text> */}
+                <Box>
+                  <Button bg={'white'} onPress={() => navigateToReview} >
+                    <Ionicons name="pencil-outline"></Ionicons>
+                  </Button>
+                </Box>
+              </HStack>
+            </VStack>
+          </Box>
+          {/* </HStack> */}
+        </Box>
+      </Box>
     );
   };
 
   return (
-    <SafeAreaView>
+    <Box flex={1} bg={"#FFEEDC"}>
       <FlatList
         data={datas}
         renderItem={renderitem}
         keyExtractor={(item) => item.id}
         showsVerticalScrollIndicator={false}
+        marginBottom={100}
       />
-    </SafeAreaView>
+    </Box>
   );
 };
 
 export default Bookmark;
-
