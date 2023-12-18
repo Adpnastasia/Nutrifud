@@ -16,11 +16,14 @@ import {
   safeArea
 } from "native-base";
 import { useState } from "react";
+import Header from "../components/header";
 
 const Write = () => {
   const [KirimSelesaiAwal, KirimSelesaiSetelah] = useState(false);
 
   return (
+    <>
+    <Header/>
     <NativeBaseProvider>
       <Box flex={1} bg={"#FFEEDC"}>
         <Center>
@@ -115,6 +118,7 @@ const Write = () => {
         </Center>
       </Box>
     </NativeBaseProvider>
+    </>
   );
 };
 

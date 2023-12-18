@@ -11,6 +11,7 @@ import {
   Heading,
 } from "native-base";
 import datas from "../datas";
+import Header from "../components/header";
 
 const List = () => {
   const renderItem = ({ item }) => {
@@ -46,11 +47,14 @@ const List = () => {
   };
 
   return (
+    <>
+    <Header/>
     <FlatList
       data={datas}
       renderItem={renderItem}
       keyExtractor={(item) => item.id}
     />
+    </>
   );
 };
 

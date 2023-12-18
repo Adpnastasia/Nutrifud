@@ -19,6 +19,7 @@ import datas from "../datas";
 import { SafeAreaView } from 'react-native';
 import Ionicons from "@expo/vector-icons/Ionicons"
 import { useNavigation } from '@react-navigation/native';
+import Header from '../components/header';
 
 const Bookmark = () => {
   const navigation = useNavigation();
@@ -68,6 +69,8 @@ const Bookmark = () => {
   };
 
   return (
+    <>
+    <Header/>
     <Box flex={1} bg={"#FFEEDC"}>
       <FlatList
         data={datas}
@@ -77,6 +80,7 @@ const Bookmark = () => {
         marginBottom={100}
       />
     </Box>
+    </>
   );
 };
 

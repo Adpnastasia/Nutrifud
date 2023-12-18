@@ -5,9 +5,16 @@ const datas = [
   {
     id: 1,
     title: "Chicken Satay with Salad",
-    description: "Loved itt",
+    time: "30 min",
+    calories: "270 cal",
     image:
-      "https://i.pinimg.com/564x/e0/89/78/e089786326df1b9125cfcc553bd92ab7.jpg",
+      "https://i.pinimg.com/564x/8b/47/67/8b4767a03b4f6fadb7ac02f307e9a7f1.jpg",
+    ingredients: [
+      "Chicken",
+      "Vegetable",
+      "Salad Dressings",
+      "Barbeque Sauce",
+    ],
     content: content,
   },
   {
@@ -16,6 +23,16 @@ const datas = [
     description: "So Good",
     image:
       "https://i.pinimg.com/564x/ab/7c/97/ab7c978def53dab12dd788a3c4082bbe.jpg",
+    time: "30 min",
+    calories: "321 cal",
+    image:
+      "https://i.pinimg.com/564x/3d/61/a3/3d61a30ed5c599c52a5c5678c76ca808.jpg",
+    ingredients: [
+      "Tomato",
+      "Cauliflower",
+      "Broth",
+      "Coconut milk",
+    ],
     content: content,
   },
   {
@@ -24,6 +41,17 @@ const datas = [
     description: "Liked it",
     image:
       "https://i.pinimg.com/564x/e6/74/1e/e6741ea003494ca3bfc3e60622bf5e3a.jpg",
+    time: "10 min",
+    calories: "178 cal",
+    image:
+      "https://i.pinimg.com/564x/e6/74/1e/e6741ea003494ca3bfc3e60622bf5e3a.jpg",
+    ingredients: [
+      "Bread",
+      "Egg",
+      "Avocado",
+      "Oregano",
+    ],
+
     content: content,
   },
   {
@@ -32,14 +60,39 @@ const datas = [
     description: "Nice nice",
     image:
       "https://i.pinimg.com/564x/6a/b3/e8/6ab3e82ec375d04ee02c0f3db7439c51.jpg",
+
+    time: "15 min",
+    calories: "221 cal",
+    image:
+      "https://i.pinimg.com/564x/6a/b3/e8/6ab3e82ec375d04ee02c0f3db7439c51.jpg",
+    ingredients: [
+      "Pasta",
+      "Mushroom",
+      "Onion",
+      "White Sauce",
+    ],
+
     content: content,
   },
   {
     id: 5,
     title: "Protein packed Chicken and Avocado Macro bowl",
+
     description: "Very Good",
     image:
       "https://i.pinimg.com/564x/5c/30/b9/5c30b9dae570613a7a2af2b06aa79b88.jpg",
+
+    time: "20 min",
+    calories: "315 cal",
+    image:
+      "https://i.pinimg.com/564x/ab/7c/97/ab7c978def53dab12dd788a3c4082bbe.jpg",
+    ingredients: [
+      "Chicken",
+      "Avocado",
+      "Broth",
+      "Salad",
+    ],
+
     content: content,
   },
   {
@@ -48,6 +101,16 @@ const datas = [
     description: "Awesomee",
     image:
       "https://i.pinimg.com/564x/e0/89/78/e089786326df1b9125cfcc553bd92ab7.jpg",
+    time: "30 min",
+    calories: "270 cal",
+    image:
+      "https://i.pinimg.com/564x/8b/47/67/8b4767a03b4f6fadb7ac02f307e9a7f1.jpg",
+    ingredients: [
+      "Chicken",
+      "Vegetable",
+      "Salad Dressings",
+      "Barbeque Sauce",
+    ],
     content: content,
   },
   {
@@ -56,6 +119,16 @@ const datas = [
     description: "my dad liked it",
     image:
       "https://i.pinimg.com/564x/ab/7c/97/ab7c978def53dab12dd788a3c4082bbe.jpg",
+    time: "30 min",
+    calories: "321 cal",
+    image:
+      "https://i.pinimg.com/564x/3d/61/a3/3d61a30ed5c599c52a5c5678c76ca808.jpg",
+    ingredients: [
+      "Tomato",
+      "Cauliflower",
+      "Broth",
+      "Coconut milk",
+    ],
     content: content,
   },
   {
@@ -64,6 +137,16 @@ const datas = [
     description: "i hope my friend try this, bcs it's just to good",
     image:
       "https://i.pinimg.com/564x/e6/74/1e/e6741ea003494ca3bfc3e60622bf5e3a.jpg",
+    time: "10 min",
+    calories: "178 cal",
+    image:
+      "https://i.pinimg.com/564x/e6/74/1e/e6741ea003494ca3bfc3e60622bf5e3a.jpg",
+    ingredients: [
+      "Bread",
+      "Egg",
+      "Avocado",
+      "Oregano",
+    ],
     content: content,
   },
   {
@@ -72,6 +155,16 @@ const datas = [
     description: "My mom make this, instantly like it",
     image:
       "https://i.pinimg.com/564x/6a/b3/e8/6ab3e82ec375d04ee02c0f3db7439c51.jpg",
+    time: "15 min",
+    calories: "221 cal",
+    image:
+      "https://i.pinimg.com/564x/6a/b3/e8/6ab3e82ec375d04ee02c0f3db7439c51.jpg",
+    ingredients: [
+      "Pasta",
+      "Mushroom",
+      "Onion",
+      "White Sauce",
+    ],
     content: content,
   },
   {
@@ -80,6 +173,16 @@ const datas = [
     description: "Liked it so much",
     image:
       "https://i.pinimg.com/564x/5c/30/b9/5c30b9dae570613a7a2af2b06aa79b88.jpg",
+    time: "20 min",
+    calories: "315 cal",
+    image:
+      "https://i.pinimg.com/564x/ab/7c/97/ab7c978def53dab12dd788a3c4082bbe.jpg",
+    ingredients: [
+      "Chicken",
+      "Avocado",
+      "Broth",
+      "Salad",
+    ],
     content: content,
   },
 ];

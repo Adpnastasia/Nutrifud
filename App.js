@@ -6,14 +6,13 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import Home from "./screens/home";
 import Bookmark from "./screens/bookmark";
 import Calculator from "./screens/calculator";
-import Category from "./screens/category";
+import Category from "./screens/kategori";
 import Recipe from "./screens/recipe";
 import Write from "./screens/write";
 import Welcome from "./screens/welcome";
-import { TouchableOpacity } from "react-native";
-import View from "native-base/src/theme/components/view";
-import { Header } from "./components";
+import DetailKategori from "./screens/detailKategori";
 import Review from "./screens/review";
+import React from "react";
 
 // Navigator Declaration
 const Stack = createNativeStackNavigator();
@@ -46,6 +45,8 @@ const Tabs = () => {
             case "Review":
               iconName = "book-outline";
               break;
+            default:
+              iconName = "help-circle-outline";
           }
           return (
             <Ionicons
@@ -67,10 +68,15 @@ const Tabs = () => {
           shadowColor: '#F15A24',
           elevation: 4,
         },
+        tabBarLabelStyle: {
+          marginBottom: 3,
+        },
         tabBarLabel: ({ children, color, focused }) => {
           return (
-            <Text 
-              color={focused ? "#F15A24" : color} mb={3}>
+            <Text
+              color={focused ? "#F15A24" : color}
+              style={{ marginBottom: 3 }}
+            >
               {children}
             </Text>
           );
@@ -90,13 +96,18 @@ const Tabs = () => {
 const App = () => {
   return (
     <NativeBaseProvider>
-        <NavigationContainer>
-          <Header></Header>
-            <Stack.Navigator>
-                <Stack.Screen name="Tabs" component={Tabs} options={noHead} />
-                <Stack.Screen name="Review" component={Tabs} options={noHead} />
-            </Stack.Navigator>
-        </NavigationContainer>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Welcome" component={Welcome} options={noHead} />
+          <Stack.Screen name="Tabs" component={Tabs} options={noHead} />
+          <Stack.Screen name="Recipe" component={Recipe} options={noHead} />
+          <Stack.Screen
+            name="DetailKategori"
+            component={DetailKategori}
+            options={noHead}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
     </NativeBaseProvider>
   );
 };
