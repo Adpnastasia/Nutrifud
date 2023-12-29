@@ -3,6 +3,7 @@ import { Image, Text, FlatList, Box } from "native-base";
 import { TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import kategori from "../datas/kategori";
+import Header from '../components/header';
 
 const Kategori = () => {
   const navigation = useNavigation();
@@ -17,7 +18,7 @@ const Kategori = () => {
         <Box
           width={165} 
           height={210} 
-          margin={2}
+          margin={3.5}
           borderRadius="md"
           overflow="hidden"
           borderColor="#D3B292" 
@@ -41,6 +42,7 @@ const Kategori = () => {
 
   return (
     <>
+      <Header/>
       <Box bg="#FFEEDB" flex={1}>
         <Box alignItems="center" mt="3" mb="3">
             <Text color="#ED7D31" fontWeight="bold" fontSize="xl">Kategori Resep</Text>

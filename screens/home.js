@@ -4,7 +4,7 @@ import { TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { SliderBox } from 'react-native-image-slider-box';
 import datas from "../datas";
-import Header from '../components/header';
+import HeaderProfile from '../components/headerprofile';
 
 const Home = () => {
   const navigation = useNavigation();
@@ -14,9 +14,9 @@ const Home = () => {
       activeOpacity={0.5}
       onPress={() => navigation.navigate("Recipe", { item: item })}
     >
-      <Box w={"40"} mr={"3"} ml={"4"} position="relative">
+      <Box ml={"4"} position="relative">
         <Heading
-          fontSize={"sm"}
+          fontSize={"xs"}
           lineHeight={"xs"}
           ellipsizeMode="tail"
           numberOfLines={2}
@@ -31,8 +31,8 @@ const Home = () => {
         </Heading>
         <Image
           source={{ uri: item.image }}
-          w="full"
-          h="200"
+          w="140"
+          h="150"
           alt="Image Data"
           mb={"1"}
           borderRadius={10}
@@ -43,7 +43,7 @@ const Home = () => {
 
   return (
     <>
-      <Header/>
+      <HeaderProfile/>
       <ScrollView style={{ marginTop: 0 }}>
         <Box bg="#FFEEDC" flex={1} style={{ paddingTop: 0 }}>
           <View style={{ flexDirection: 'row', alignItems: 'center', paddingTop: 0 }}>

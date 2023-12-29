@@ -12,6 +12,7 @@ import {
   HStack,
 } from 'native-base';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import Header from '../components/header';
 
 const Kalkulator = () => {
   const [tinggi, setTinggi] = useState('');
@@ -48,6 +49,8 @@ const Kalkulator = () => {
   };
 
   return (
+    <>
+    <Header/>
     <Box bg="#FFEEDB" flex={1}>
       <SafeAreaView>
         <ScrollView>
@@ -120,6 +123,7 @@ const Kalkulator = () => {
         </ScrollView>
       </SafeAreaView>
     </Box>
+    </>
   );
 };
 

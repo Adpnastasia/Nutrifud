@@ -4,7 +4,7 @@ import { Box } from "native-base";
 import { useNavigation } from "@react-navigation/native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
-const Header = ({ withBack = false }) => {
+const HeaderProfile = () => {
   const navigation = useNavigation();
   const windowWidth = Dimensions.get('window').width;
   const windowHeight = Dimensions.get('window').height;
@@ -12,24 +12,22 @@ const Header = ({ withBack = false }) => {
   return (
     <SafeAreaView>
         <ImageBackground
-          source={require("../assets/Header.png")}
+          source={require("../assets/HP.png")}
           style={{ width: windowWidth, height: windowHeight * 0.13, alignItems: "center" }}
         >
-        <Box position="absolute" bottom={9} left={12}>
-          {withBack && (
+        <Box position="center" bottom={-28}> 
             <TouchableOpacity
               activeOpacity={0.5}
-              onPress={() => navigation.goBack()}
+              onPress={() => navigation.navigate("Profile")}
             >
-              <Ionicons name="arrow-back-outline" size={30} color="#ED7D31" />
+              <Ionicons name="person-circle-outline" size={50} color="#F15A24"/>
             </TouchableOpacity>
-          )}
         </Box>
         </ImageBackground>
     </SafeAreaView>
   );
 };
 
-export default Header;
+export default HeaderProfile;
 
 
