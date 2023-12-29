@@ -5,6 +5,7 @@ const datas = [
   {
     id: 1,
     title: "Chicken Satay with Salad",
+    description: "So gooood",
     time: "30 min",
     calories: "270 cal",
     image:

@@ -2,7 +2,8 @@ import React from "react";
 import { Image, Text, FlatList, Box } from "native-base";
 import { TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import kategori from "../datas/kategori";
+// import kategori from "../datas/kategori";
+import kategori from '../datas/kategori'
 
 const Kategori = () => {
   const navigation = useNavigation();

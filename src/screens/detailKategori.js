@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, FlatList, Image, Box, VStack } from 'native-base';
-import datas from '../datas/datas';
+// import datas from '../datas/datas';
+import datas from "../datas/datas1"
 
 const DetailKategori = ({ route }) => {
   const { kategori } = route.params;

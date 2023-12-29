@@ -15,7 +15,8 @@ import {
   HStack,
   VStack,
 } from "native-base";
-import datas from "../datas";
+// import datas from "../datas";
+import datas from "../datas/datas1"
 import { SafeAreaView } from 'react-native';
 import Ionicons from "@expo/vector-icons/Ionicons"
 import { useNavigation } from '@react-navigation/native';

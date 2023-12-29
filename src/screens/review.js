@@ -10,7 +10,8 @@ import {
   Box,
   Heading,
 } from "native-base";
-import datas from "../datas";
+// import datas from "../datas";
+import datas from "../datas/datas1"
 import Header from "../components/header";
 
 const List = () => {

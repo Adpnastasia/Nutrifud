@@ -3,7 +3,8 @@ import { Heading, Image, Text, Box, View, FlatList, ScrollView } from "native-ba
 import { TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { SliderBox } from 'react-native-image-slider-box';
-import datas from "../datas";
+// import datas from "../datas";
+import datas from "../datas/datas1"
 import Header from '../components/header';
 
 const Home = () => {

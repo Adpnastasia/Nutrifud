@@ -3,16 +3,18 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { NativeBaseProvider, Text } from "native-base";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import Home from "./screens/home";
-import Bookmark from "./screens/bookmark";
-import Calculator from "./screens/calculator";
-import Category from "./screens/kategori";
-import Recipe from "./screens/recipe";
-import Write from "./screens/write";
-import Welcome from "./screens/welcome";
-import DetailKategori from "./screens/detailKategori";
-import Review from "./screens/review";
+import Home from "./src/screens/home"
+import Bookmark from "./src/screens/bookmark";
+import Calculator from "./src/screens/calculator";
+import Category from "./src/screens/kategori";
+import Recipe from "./src/screens/recipe";
+import Write from "./src/screens/write";
+import Welcome from "./src/screens/welcome";
+import DetailKategori from "./src/screens/detailKategori";
+import Review from "./src/screens/review";
 import React from "react";
+import Login from "./src/screens/login";
+import Register from './src/screens/register'
 
 // Navigator Declaration
 const Stack = createNativeStackNavigator();
@@ -106,6 +108,8 @@ const App = () => {
             component={DetailKategori}
             options={noHead}
           />
+          <Stack.Screen name="Login" component={Login} options={noHead} />
+          <Stack.Screen name="Register" component={Register} options={noHead} />
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
