@@ -4,10 +4,17 @@
     "slug": "nutrifud",
     "version": "1.0.0",
     "orientation": "portrait",
+<<<<<<< HEAD
     "icon": "./src/assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./src/assets/splash.png",
+=======
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+>>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,12 +26,20 @@
     },
     "android": {
       "adaptiveIcon": {
+<<<<<<< HEAD
         "foregroundImage": "./src/assets/adaptive-icon.png",
+=======
+        "foregroundImage": "./assets/adaptive-icon.png",
+>>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
+<<<<<<< HEAD
       "favicon": "./src/assets/favicon.png"
+=======
+      "favicon": "./assets/favicon.png"
+>>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
     }
   }
 }
