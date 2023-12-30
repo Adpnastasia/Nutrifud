@@ -1,13 +1,7 @@
 const content =
-<<<<<<< HEAD
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida, orci nec feugiat commodo, ipsum orci consequat nulla, non sodales sem lorem et ante. Etiam dignissim tempor elit, nec feugiat ante suscipit eget. Sed imperdiet diam at ultrices viverra. Duis malesuada mattis tortor, ac ultrices elit euismod a.\n\nSuspendisse tincidunt eleifend volutpat. Phasellus vehicula sapien eu aliquam dignissim. Duis diam lorem, porta id nisi a, interdum rutrum quam. Suspendisse tincidunt euismod nunc. Etiam interdum, sem tincidunt sodales dignissim, orci ligula hendrerit dolor, ac suscipit neque eros sit amet magna. Sed gravida porttitor justo in venenatis. Maecenas dolor odio, semper eu velit pharetra, euismod placerat lectus. Curabitur nec aliquam mi. Aliquam suscipit iaculis vestibulum. Integer nibh ante, dignissim sed convallis eget, elementum ut nunc. Fusce non pharetra enim. Etiam ut justo est. Morbi commodo bibendum lorem a condimentum. Nulla ut magna tempor neque fringilla auctor. Ut aliquam ipsum urna, sodales ultricies ipsum pulvinar ac.\n\nNullam ultrices egestas dapibus. Vivamus sodales, nisl vel lobortis vestibulum, elit libero venenatis mauris, ut efficitur augue turpis ac lorem. Duis eu hendrerit ligula. Mauris auctor, purus ut ornare condimentum, ligula nisi egestas erat, eu fermentum libero massa tincidunt turpis. Suspendisse porta luctus elit eu pellentesque. Vivamus feugiat pellentesque hendrerit. Duis eu vulputate urna, quis bibendum nulla.\n\nPhasellus et faucibus elit, mollis accumsan arcu. Fusce scelerisque orci purus, vel scelerisque nisl viverra vitae. Nulla non lectus in lacus mollis consequat. Aenean consequat luctus tristique. Nunc imperdiet condimentum cursus. Praesent vel fermentum est, id pulvinar est. Nunc dolor velit, commodo non vehicula at, tincidunt lobortis mauris. Curabitur laoreet ipsum ut erat interdum ornare.";
 
 const datas = [
-=======
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-
-  const datas = [
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
   {
     id: 1,
     title: "Chicken Satay with Salad",
@@ -26,12 +20,7 @@ const datas = [
   {
     id: 2,
     title: "Creamy Vegan Tomato and Cauliflower Bisque",
-<<<<<<< HEAD
     description: "So Good",
-    image:
-      "https://i.pinimg.com/564x/ab/7c/97/ab7c978def53dab12dd788a3c4082bbe.jpg",
-=======
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
     time: "30 min",
     calories: "321 cal",
     image:
@@ -47,12 +36,7 @@ const datas = [
   {
     id: 3,
     title: "Healthy Toast",
-<<<<<<< HEAD
     description: "Liked it",
-    image:
-      "https://i.pinimg.com/564x/e6/74/1e/e6741ea003494ca3bfc3e60622bf5e3a.jpg",
-=======
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
     time: "10 min",
     calories: "178 cal",
     image:
@@ -63,22 +47,12 @@ const datas = [
       "Avocado",
       "Oregano",
     ],
-<<<<<<< HEAD
-
-=======
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
     content: content,
   },
   {
     id: 4,
     title: "Healthy Pasta",
-<<<<<<< HEAD
     description: "Nice nice",
-    image:
-      "https://i.pinimg.com/564x/6a/b3/e8/6ab3e82ec375d04ee02c0f3db7439c51.jpg",
-
-=======
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
     time: "15 min",
     calories: "221 cal",
     image:
@@ -89,23 +63,12 @@ const datas = [
       "Onion",
       "White Sauce",
     ],
-<<<<<<< HEAD
-
-=======
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
     content: content,
   },
   {
     id: 5,
     title: "Protein packed Chicken and Avocado Macro bowl",
-<<<<<<< HEAD
-
     description: "Very Good",
-    image:
-      "https://i.pinimg.com/564x/5c/30/b9/5c30b9dae570613a7a2af2b06aa79b88.jpg",
-
-=======
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
     time: "20 min",
     calories: "315 cal",
     image:
@@ -116,21 +79,12 @@ const datas = [
       "Broth",
       "Salad",
     ],
-<<<<<<< HEAD
-
-=======
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
     content: content,
   },
   {
     id: 6,
     title: "Chicken Satay with Salad",
-<<<<<<< HEAD
     description: "Awesomee",
-    image:
-      "https://i.pinimg.com/564x/e0/89/78/e089786326df1b9125cfcc553bd92ab7.jpg",
-=======
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
     time: "30 min",
     calories: "270 cal",
     image:
@@ -146,12 +100,7 @@ const datas = [
   {
     id: 7,
     title: "Creamy Vegan Tomato and Cauliflower Bisque",
-<<<<<<< HEAD
     description: "my dad liked it",
-    image:
-      "https://i.pinimg.com/564x/ab/7c/97/ab7c978def53dab12dd788a3c4082bbe.jpg",
-=======
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
     time: "30 min",
     calories: "321 cal",
     image:
@@ -167,12 +116,7 @@ const datas = [
   {
     id: 8,
     title: "Healthy Toast",
-<<<<<<< HEAD
     description: "i hope my friend try this, bcs it's just to good",
-    image:
-      "https://i.pinimg.com/564x/e6/74/1e/e6741ea003494ca3bfc3e60622bf5e3a.jpg",
-=======
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
     time: "10 min",
     calories: "178 cal",
     image:
@@ -188,12 +132,7 @@ const datas = [
   {
     id: 9,
     title: "Healthy Pasta",
-<<<<<<< HEAD
     description: "My mom make this, instantly like it",
-    image:
-      "https://i.pinimg.com/564x/6a/b3/e8/6ab3e82ec375d04ee02c0f3db7439c51.jpg",
-=======
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
     time: "15 min",
     calories: "221 cal",
     image:
@@ -209,12 +148,7 @@ const datas = [
   {
     id: 10,
     title: "Protein packed Chicken and Avocado Macro bowl",
-<<<<<<< HEAD
     description: "Liked it so much",
-    image:
-      "https://i.pinimg.com/564x/5c/30/b9/5c30b9dae570613a7a2af2b06aa79b88.jpg",
-=======
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
     time: "20 min",
     calories: "315 cal",
     image:

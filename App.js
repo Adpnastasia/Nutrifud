@@ -3,7 +3,6 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { NativeBaseProvider, Text } from "native-base";
 import Ionicons from "@expo/vector-icons/Ionicons";
-<<<<<<< HEAD
 import Home from "./src/screens/home"
 import Bookmark from "./src/screens/bookmark";
 import Calculator from "./src/screens/calculator";
@@ -17,19 +16,6 @@ import React from "react";
 import Login from "./src/screens/login";
 import Register from './src/screens/register'
 import Profile from "./src/screens/profile";
-=======
-import Home from "./screens/home";
-import Bookmark from "./screens/bookmark";
-import Calculator from "./screens/calculator";
-import Category from "./screens/kategori";
-import Recipe from "./screens/recipe";
-import Write from "./screens/write";
-import Welcome from "./screens/welcome";
-import DetailKategori from "./screens/detailKategori";
-import Profile from "./screens/profile";
-import { TouchableOpacity } from "react-native";
-import View from "native-base/src/theme/components/view";
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
 
 // Navigator Declaration
 const Stack = createNativeStackNavigator();
@@ -59,14 +45,13 @@ const Tabs = () => {
             case "BMI":
               iconName = "calculator-outline";
               break;
-<<<<<<< HEAD
+
             case "Review":
               iconName = "book-outline";
               break;
             default:
               iconName = "help-circle-outline";
-=======
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
+
           }
           return (
             <Ionicons
@@ -80,35 +65,22 @@ const Tabs = () => {
         tabBarStyle: {
           position: 'absolute',
           bottom: 15,
-<<<<<<< HEAD
           left: 10,
           right: 10,
           elevation: 0,
-=======
-          left: 20,
-          right: 20,
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
           borderRadius: 15,
           height: 80,
           shadowColor: '#F15A24',
           elevation: 4,
         },
-<<<<<<< HEAD
+
         tabBarLabelStyle: {
           marginBottom: 3,
         },
         tabBarLabel: ({ children, color, focused }) => {
           return (
-            <Text
-              color={focused ? "#F15A24" : color}
-              style={{ marginBottom: 3 }}
-            >
-=======
-        tabBarLabel: ({ children, color, focused }) => {
-          return (
             <Text 
               color={focused ? "#F15A24" : color} mb={3}>
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
               {children}
             </Text>
           );
@@ -120,10 +92,7 @@ const Tabs = () => {
       <Tab.Screen name="Write" component={Write} options={noHead} />
       <Tab.Screen name="Category" component={Category} options={noHead} />
       <Tab.Screen name="BMI" component={Calculator} options={noHead} />
-<<<<<<< HEAD
       <Tab.Screen name="Review" component={Review} options={noHead} />
-=======
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
     </Tab.Navigator>
   );
 };
@@ -131,7 +100,6 @@ const Tabs = () => {
 const App = () => {
   return (
     <NativeBaseProvider>
-<<<<<<< HEAD
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Welcome" component={Welcome} options={noHead} />
@@ -143,23 +111,8 @@ const App = () => {
           <Stack.Screen name="DetailKategori" component={DetailKategori} options={noHead} />
         </Stack.Navigator>
       </NavigationContainer>
-=======
-        <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen name="Welcome" component={Welcome} options={noHead}/>
-                <Stack.Screen name="Tabs" component={Tabs} options={noHead} />
-                <Stack.Screen name="Profile" component={Profile} options={noHead} />
-                <Stack.Screen name="DetailKategori" component={DetailKategori} options={noHead} />
-                <Stack.Screen name="Recipe" component={Recipe} options={noHead}/>
-            </Stack.Navigator>
-        </NavigationContainer>
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
     </NativeBaseProvider>
   );
 };
 
-<<<<<<< HEAD
 export default App;
-=======
-export default App;
->>>>>>> 0a93e83f37d1abcf950c631b1d5e6906afc6bb0e
