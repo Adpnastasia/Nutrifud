@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import {
   Box,
@@ -47,9 +48,14 @@ const Kalkulator = () => {
       return { category: 'Kelebihan Berat Badan', title: ['Rendah Lemak', 'Rendah Karbo'] };
     }
   };
+=======
+import { Heading, Center } from "native-base";
+>>>>>>> parent of 5e73112 (Merge branch 'master' of https://github.com/Adpnastasia/Nutrifud into tasya)
 
+const Calculator = () => {
   return (
     <>
+<<<<<<< HEAD
     <Header/>
     <Box bg="#FFEEDB" flex={1}>
       <SafeAreaView>
@@ -123,8 +129,16 @@ const Kalkulator = () => {
         </ScrollView>
       </SafeAreaView>
     </Box>
+=======
+      <Center 
+        flex={1}
+        bg="#FFEEDC"
+      >
+        <Heading>Calculator</Heading>
+      </Center>
+>>>>>>> parent of 5e73112 (Merge branch 'master' of https://github.com/Adpnastasia/Nutrifud into tasya)
     </>
   );
 };
 
-export default Kalkulator;
+export default Calculator;
