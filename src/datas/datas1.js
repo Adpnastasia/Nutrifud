@@ -5,6 +5,7 @@ const datas = [
   {
     id: 1,
     title: "Chicken Satay with Salad",
+    description: "So gooood",
     time: "30 min",
     calories: "270 cal",
     image:
@@ -21,6 +22,8 @@ const datas = [
     id: 2,
     title: "Creamy Vegan Tomato and Cauliflower Bisque",
     description: "So Good",
+    image:
+      "https://i.pinimg.com/564x/ab/7c/97/ab7c978def53dab12dd788a3c4082bbe.jpg",
     time: "30 min",
     calories: "321 cal",
     image:
@@ -37,6 +40,8 @@ const datas = [
     id: 3,
     title: "Healthy Toast",
     description: "Liked it",
+    image:
+      "https://i.pinimg.com/564x/e6/74/1e/e6741ea003494ca3bfc3e60622bf5e3a.jpg",
     time: "10 min",
     calories: "178 cal",
     image:
@@ -47,12 +52,16 @@ const datas = [
       "Avocado",
       "Oregano",
     ],
+
     content: content,
   },
   {
     id: 4,
     title: "Healthy Pasta",
     description: "Nice nice",
+    image:
+      "https://i.pinimg.com/564x/6a/b3/e8/6ab3e82ec375d04ee02c0f3db7439c51.jpg",
+
     time: "15 min",
     calories: "221 cal",
     image:
@@ -63,12 +72,17 @@ const datas = [
       "Onion",
       "White Sauce",
     ],
+
     content: content,
   },
   {
     id: 5,
     title: "Protein packed Chicken and Avocado Macro bowl",
+
     description: "Very Good",
+    image:
+      "https://i.pinimg.com/564x/5c/30/b9/5c30b9dae570613a7a2af2b06aa79b88.jpg",
+
     time: "20 min",
     calories: "315 cal",
     image:
@@ -79,12 +93,15 @@ const datas = [
       "Broth",
       "Salad",
     ],
+
     content: content,
   },
   {
     id: 6,
     title: "Chicken Satay with Salad",
     description: "Awesomee",
+    image:
+      "https://i.pinimg.com/564x/e0/89/78/e089786326df1b9125cfcc553bd92ab7.jpg",
     time: "30 min",
     calories: "270 cal",
     image:
@@ -101,6 +118,8 @@ const datas = [
     id: 7,
     title: "Creamy Vegan Tomato and Cauliflower Bisque",
     description: "my dad liked it",
+    image:
+      "https://i.pinimg.com/564x/ab/7c/97/ab7c978def53dab12dd788a3c4082bbe.jpg",
     time: "30 min",
     calories: "321 cal",
     image:
@@ -117,6 +136,8 @@ const datas = [
     id: 8,
     title: "Healthy Toast",
     description: "i hope my friend try this, bcs it's just to good",
+    image:
+      "https://i.pinimg.com/564x/e6/74/1e/e6741ea003494ca3bfc3e60622bf5e3a.jpg",
     time: "10 min",
     calories: "178 cal",
     image:
@@ -133,6 +154,8 @@ const datas = [
     id: 9,
     title: "Healthy Pasta",
     description: "My mom make this, instantly like it",
+    image:
+      "https://i.pinimg.com/564x/6a/b3/e8/6ab3e82ec375d04ee02c0f3db7439c51.jpg",
     time: "15 min",
     calories: "221 cal",
     image:
@@ -149,6 +172,8 @@ const datas = [
     id: 10,
     title: "Protein packed Chicken and Avocado Macro bowl",
     description: "Liked it so much",
+    image:
+      "https://i.pinimg.com/564x/5c/30/b9/5c30b9dae570613a7a2af2b06aa79b88.jpg",
     time: "20 min",
     calories: "315 cal",
     image:

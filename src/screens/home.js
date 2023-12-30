@@ -3,8 +3,8 @@ import { Heading, Image, Text, Box, View, FlatList, ScrollView } from "native-ba
 import { TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { SliderBox } from 'react-native-image-slider-box';
-import datas from "../datas";
-import HeaderProfile from '../components/headerprofile';
+import datas from "../datas/datas1";
+import HeaderPro from "../components/headerpro";
 
 const Home = () => {
   const navigation = useNavigation();
@@ -16,7 +16,7 @@ const Home = () => {
     >
       <Box ml={"4"} position="relative">
         <Heading
-          fontSize={"xs"}
+          fontSize={"sm"}
           lineHeight={"xs"}
           ellipsizeMode="tail"
           numberOfLines={2}
@@ -43,7 +43,7 @@ const Home = () => {
 
   return (
     <>
-      <HeaderProfile/>
+      <HeaderPro/>
       <ScrollView style={{ marginTop: 0 }}>
         <Box bg="#FFEEDC" flex={1} style={{ paddingTop: 0 }}>
           <View style={{ flexDirection: 'row', alignItems: 'center', paddingTop: 0 }}>

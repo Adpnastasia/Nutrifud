@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Text, FlatList, Box } from "native-base";
+import { Image, Text, FlatList, Box, Center } from "native-base";
 import { TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import kategori from "../datas/kategori";
@@ -18,11 +18,12 @@ const Kategori = () => {
         <Box
           width={165} 
           height={210} 
-          margin={3.5}
+          margin={2}
           borderRadius="md"
           overflow="hidden"
           borderColor="#D3B292" 
           borderWidth={1}
+          justifyContent="center"
         >
           <Image
             source={{ uri: item.image }}
