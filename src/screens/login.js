@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Alert, Box, Text, FormControl, Heading, AlertText, Modal, ModalBackdrop, Input, Button, Image, VStack } from "native-base";
 import { loginUser } from "../actions/AuthAction"
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Login = ({ navigation }) => {
     const [email, setEmail] = useState("");
@@ -11,6 +12,17 @@ const Login = ({ navigation }) => {
     const toggleAlert = (message) => {
         setShowAlert(!showAlert);
         setAlertMessage(message);
+    };
+
+    useEffect(() => {
+        checkLoginStatus();
+    }, []);
+
+    const checkLoginStatus = async () => {
+        const userData = await AsyncStorage.getItem("user");
+        if (userData) {
+            navigation.replace('Tabs'); // Use replace to prevent going back to the login screen
+        }
     };
 
     const login = () => {
