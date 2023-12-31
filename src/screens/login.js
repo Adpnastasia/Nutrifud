@@ -1,16 +1,5 @@
 import React, { useState } from "react";
-// import {
-//     Alert,
-//     Box,
-//     Text,
-//     FormControl,
-//     Heading,
-//     AlertText,
-//     Modal,
-//     ModalBackdrop,
-// } from "@gluestack-ui/themed";
 import { Alert, Box, Text, FormControl, Heading, AlertText, Modal, ModalBackdrop, Input, Button, Image, VStack } from "native-base";
-// import { Input, Button } from "../components";
 import { loginUser } from "../actions/AuthAction"
 
 const Login = ({ navigation }) => {
@@ -36,6 +25,8 @@ const Login = ({ navigation }) => {
                     console.log("Error", error.message);
                     toggleAlert(error.message);
                 });
+        } else {
+            toggleAlert("Email dan Password tidak boleh kosong!")
         }
     };
 
@@ -79,7 +70,7 @@ const Login = ({ navigation }) => {
                         value={password}
                         style={{ backgroundColor: '#D9D9D9' }}
                     />
-                    <Button title="Login" type="text" padding={"3"} bg={'#F15A24'} mt={'20'} w={'5/6'} ml={'5'} borderRadius={'full'} onPress={() => { navigation.navigate("Tabs") }}>
+                    <Button title="Login" type="text" padding={"3"} bg={'#F15A24'} mt={'20'} w={'5/6'} ml={'5'} borderRadius={'full'} onPress={() => login()}>
                         Login
                     </Button>
                     <FormControl.Label fontWeight={'bold'} mt={'5'} ml={'10'}>
@@ -90,17 +81,18 @@ const Login = ({ navigation }) => {
                     </Button>
                 </FormControl>
             </Box>
+            {showAlert && (
+                <Modal isOpen={showAlert} onClose={() => toggleAlert()}>
+                    <Modal.Content maxWidth="400px" bg={'green.400'}>
+                        <Modal.CloseButton />
+                        <Modal.Header>Error!</Modal.Header>
+                        <Modal.Body>
+                            {alertMessage}
+                        </Modal.Body>
+                    </Modal.Content>
+                </Modal>
+            )}
         </Box>
-
-            // // {/* show Alert */}
-            // {showAlert && (
-            //     <Modal isOpen={showAlert} onClose={() => toggleAlert()}>
-            //         <ModalBackdrop />
-            //         <Alert mx="$4" action="error" variant="solid">
-            //             <AlertText fontWeight="$bold">Error!</AlertText>
-            //             <AlertText>{alertMessage}</AlertText>
-            //         </Alert>
-            //     </Modal>
     );
 };
 

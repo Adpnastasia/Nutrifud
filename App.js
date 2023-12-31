@@ -15,6 +15,7 @@ import Review from "./src/screens/review";
 import React from "react";
 import Login from "./src/screens/login";
 import Register from './src/screens/register'
+import Profile from "./src/screens/profile";
 
 // Navigator Declaration
 const Stack = createNativeStackNavigator();
@@ -90,7 +91,7 @@ const Tabs = () => {
       <Tab.Screen name="Write" component={Write} options={noHead} />
       <Tab.Screen name="Category" component={Category} options={noHead} />
       <Tab.Screen name="BMI" component={Calculator} options={noHead} />
-      <Tab.Screen name="Review" component={Review} options={noHead} />
+      {/* <Tab.Screen name="Review" component={Review} options={noHead} /> */}
     </Tab.Navigator>
   );
 };
@@ -110,6 +111,7 @@ const App = () => {
           />
           <Stack.Screen name="Login" component={Login} options={noHead} />
           <Stack.Screen name="Register" component={Register} options={noHead} />
+          <Stack.Screen name="Profile" component={Profile} options={noHead} />
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
