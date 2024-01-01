@@ -1,6 +1,7 @@
-import { Button, Text, Image, Box, View } from "native-base";
+import { Text, Image, Box, View } from "native-base";
 import React, { useState, useEffect } from "react";
 import { TouchableOpacity } from "react-native";
+import Button from "../components/button";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { clearStorage, getData } from "../utils";
 import FIREBASE from "../config/FIREBASE";
@@ -69,11 +70,12 @@ const Profile = ({ navigation, withBack = true }) => {
         <Box 
           bg="white" 
           flex={1} 
-          top={-100}
+          top={-200}
           borderBottomLeftRadius={180}
           borderBottomRightRadius={180}
+          position= "absolute"
           overflow="hidden"
-          paddingTop={125}
+          paddingTop={200}
           mb={-30}
           >
         <Image
@@ -84,7 +86,7 @@ const Profile = ({ navigation, withBack = true }) => {
          />
         </Box>
 
-        <Box mt={-10}>
+        <Box mt={470}>
             <Text
             fontSize={"xl"}
             alignSelf="center"
@@ -94,7 +96,7 @@ const Profile = ({ navigation, withBack = true }) => {
             </Text>
         </Box>
 
-        <Box flexDirection="column" mt={10} mb={10} ml={-170}>
+        <Box flexDirection="column" mt={10} mb={10} mr={240}>
             <Box mb={5}>
                 <Text color="black" fontSize={"sm"}>
                     Email
@@ -112,19 +114,21 @@ const Profile = ({ navigation, withBack = true }) => {
                     {profile?.nohp}
                 </Text>
             </Box>
-        </Box>
+        </Box>    
 
-        <Button 
-            children={profile ? "Logout" : "Login"} 
-            variant="unstyled"
-            padding={"3"} 
-            bg={'#F15A24'}
-            mb={10}
-            w={'5/6'}  
-            borderRadius={'full'} 
-            onPress={() => onSubmit(profile)}>
-        </Button>
-
+        <Box
+            style={{
+            position: "absolute",
+            bottom: 40,
+            width: "100%",
+            alignItems: "center",
+          }}
+        >
+            <Button
+                text={profile ? "Logout" : "Login"}
+                onPress={() => onSubmit(profile)}
+            /> 
+        </Box>   
       </View>
     </>
   );

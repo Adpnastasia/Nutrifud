@@ -16,6 +16,7 @@ import React from "react";
 import Login from "./src/screens/login";
 import Register from "./src/screens/register";
 import Profile from "./src/screens/profile";
+import Splash from "./src/screens/splash";
 
 // Navigator Declaration
 const Stack = createNativeStackNavigator();
@@ -101,6 +102,7 @@ const App = () => {
     <NativeBaseProvider>
       <NavigationContainer>
         <Stack.Navigator>
+          <Stack.Screen name="Splash" component={Splash} options={noHead} />
           <Stack.Screen name="Welcome" component={Welcome} options={noHead} />
           <Stack.Screen name="Login" component={Login} options={noHead} />
           <Stack.Screen name="Register" component={Register} options={noHead} />

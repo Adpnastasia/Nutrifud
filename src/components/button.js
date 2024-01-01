@@ -16,7 +16,6 @@ const Button = (props) => {
       <Text
         style={{
           fontSize: 20,
-          fontWeight: "bold",
           color: "white",
         }}
       >
