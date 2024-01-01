@@ -25,3 +25,10 @@ export const getData = async (key) => {
 export const clearStorage = async () => {
     AsyncStorage.clear();
 }
+
+export const checkAsyncStorage = async (position) => {
+    const keys = await AsyncStorage.getAllKeys();
+    const items = await AsyncStorage.multiGet(keys);
+
+    console.log(position, "ASYNCSTORAGE: ", items);
+};

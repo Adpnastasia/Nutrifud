@@ -5,6 +5,7 @@ import { useNavigation } from "@react-navigation/native";
 import kategori from "../datas/kategori";
 import Header from '../components/header';
 
+
 const Kategori = () => {
   const navigation = useNavigation();
 

@@ -52,7 +52,6 @@ const datas = [
       "Avocado",
       "Oregano",
     ],
-
     content: content,
   },
   {
@@ -61,7 +60,6 @@ const datas = [
     description: "Nice nice",
     image:
       "https://i.pinimg.com/564x/6a/b3/e8/6ab3e82ec375d04ee02c0f3db7439c51.jpg",
-
     time: "15 min",
     calories: "221 cal",
     image:
@@ -72,17 +70,15 @@ const datas = [
       "Onion",
       "White Sauce",
     ],
-
     content: content,
   },
   {
     id: 5,
     title: "Protein packed Chicken and Avocado Macro bowl",
-
     description: "Very Good",
     image:
       "https://i.pinimg.com/564x/5c/30/b9/5c30b9dae570613a7a2af2b06aa79b88.jpg",
-
+    description: "Very Good",
     time: "20 min",
     calories: "315 cal",
     image:
@@ -93,7 +89,6 @@ const datas = [
       "Broth",
       "Salad",
     ],
-
     content: content,
   },
   {
@@ -189,3 +184,4 @@ const datas = [
 ];
 
 export default datas;
+
