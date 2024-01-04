@@ -2,7 +2,8 @@ import React from "react";
 import { Image, Text, FlatList, Box } from "native-base";
 import { TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import kategori from "../datas/kategori";
+// import kategori from "../datas/kategori";
+import kategori from '../datas/kategori'
 
 const Kategori = () => {
   const navigation = useNavigation();
@@ -34,6 +35,7 @@ const Kategori = () => {
               {item.kategori}
             </Text>
           </Box>
+          
         </Box>
       </TouchableOpacity>
     );
@@ -43,7 +45,7 @@ const Kategori = () => {
     <>
       <Box bg="#FFEEDB" flex={1}>
         <Box alignItems="center" mt="3" mb="3">
-            <Text color="#ED7D31" fontWeight="bold" fontSize="xl">Kategori Resep</Text>
+            <Text color="#ED7D31" fontWeight="bold" fontSize="xl">All Category</Text>
         </Box>
         <FlatList
           data={kategori}
@@ -52,6 +54,8 @@ const Kategori = () => {
           showsVerticalScrollIndicator={false}
           numColumns={2}
         />
+        <Box style={{ marginTop: 100 }}>
+        </Box>
       </Box>
     </>
   );

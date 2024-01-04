@@ -1,11 +1,12 @@
 import React from 'react';
 import { Text, FlatList, Image, Box, VStack } from 'native-base';
-import datas from '../datas/datas';
+import datas from "../datas/datas1"
 
 const DetailKategori = ({ route }) => {
   const { kategori } = route.params;
 
-  const filteredRecipes = datas.filter((recipe) => recipe.kategori.includes(kategori));
+  // Filter recipes only if kategori is defined
+  const filteredRecipes = datas.filter((recipe) => recipe.kategori && recipe.kategori.includes(kategori));
 
   return (
     <Box p={4} flex={1} bg="#FFEEDB">
@@ -31,12 +32,12 @@ const DetailKategori = ({ route }) => {
             </Text>
             <VStack space={2}>
               <Box>
-                <Text color="gray.500" fontWeight="bold">Kalori: {item.kalori}</Text>
+                <Text color="gray.500" fontWeight="bold">Calories: {item.calories}</Text>
               </Box>
             </VStack>
           </Box>
         )}
-      />
+      />  
     </Box>
   );
 };
