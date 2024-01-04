@@ -38,7 +38,11 @@ const Bookmark = () => {
   };
 
   const navigateToReview = (selectedRecipe) => {
-    navigation.navigate('review', { selectedRecipe });
+    navigation.navigate('review', {
+      screen: 'review',
+      params: { selectedRecipe }
+    });
+
   };
 
   const renderitem = ({ item }) => {

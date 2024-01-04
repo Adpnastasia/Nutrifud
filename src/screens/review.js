@@ -50,11 +50,11 @@ const List = () => {
   return (
     <>
     <Header/>
-    <FlatList
+    {/* <FlatList
       data={datas}
       renderItem={renderItem}
       keyExtractor={(item) => item.id}
-    />
+    /> */}
     </>
   );
 };
