@@ -9,6 +9,7 @@ import Calculator from "./screens/calculator";
 import Category from "./screens/kategori";
 import Recipe from "./screens/recipe";
 import Welcome from "./screens/welcome";
+
 import DetailKategori from "./screens/detailKategori";
 import Review from "./screens/review";
 import React from "react";
