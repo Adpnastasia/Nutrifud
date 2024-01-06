@@ -8,7 +8,7 @@ import React, { useState } from "react";
 //     ModalBackdrop,
 //     AlertText,
 // } from "@gluestack-ui/themed";
-import { Box, Alert, FormControl,Text,Modal,ModalBackdrop,AlertText,Input,Image,Heading,Button } from "native-base";
+import { Box, Alert, FormControl,Text,Modal,ModalBackdrop,AlertText,Input,Image,Heading,Button, ScrollView } from "native-base";
 // import { Input, Button } from "../components";
 import { registerUser } from "../actions/AuthAction";
 
@@ -60,54 +60,57 @@ const Register = ({ navigation }) => {
                 mt={'50'}
                 ml={'2/6'}
             />
-            <Box backgroundColor='white' marginTop={"5"} flex={1} borderTopLeftRadius={'56'} borderTopRightRadius={'56'} alignItems={'center'}>
-                <Heading mt={'10'} fontWeight={'normal'}>
-                    Hello, Foodies!
-                </Heading>
-                <FormControl p={'10'} >
-                    <FormControl.Label fontWeight={'bold'}>
-                        Email
-                    </FormControl.Label>
-                    <Input
-                        label={"Email"}
-                        borderRadius={'xl'}
-                        width={"max"}
-                        height={"10"}
-                        onChangeText={(email) => setEmail(email)} // Set email ke dalam state
-                        value={email}
-                        style={{ backgroundColor: '#D9D9D9' }}
-                    />
-                    <FormControl.Label fontWeight={'bold'} mt={'5'}>
-                        No. Handphone
-                    </FormControl.Label>
-                    <Input
-                        label={"No. Handphone"}
-                        borderRadius={'xl'}
-                        width={"max"}
-                        height={"10"}
-                        // secureTextEntry={true}
-                        onChangeText={(nohp) => setNohp(nohp)} // Set nohp ke dalam state
-                        value={nohp}
-                        style={{ backgroundColor: '#D9D9D9' }}
-                    />
-                    <FormControl.Label fontWeight={'bold'} mt={'5'}>
-                        Password
-                    </FormControl.Label>
-                    <Input
-                        label={"Password"}
-                        borderRadius={'xl'}
-                        width={"max"}
-                        height={"10"}
-                        // secureTextEntry={true}
-                        onChangeText={(password) => setPassword(password)} // Set password ke dalam state
-                        value={password}
-                        style={{ backgroundColor: '#D9D9D9' }}
-                    />
-                    <Button title="Register" type="text" padding={"3"} bg={'#F15A24'} mt={'20'} w={'5/6'} ml={'5'} borderRadius={'full'} onPress={() => { onRegister(); }}>
-                        Register
-                    </Button>
-                </FormControl>
-            </Box>
+            <ScrollView>
+                <Box backgroundColor='white' marginTop={"5"} flex={1} borderTopLeftRadius={'56'} borderTopRightRadius={'56'} alignItems={'center'}>
+                    <Heading mt={'10'} fontWeight={'normal'}>
+                        Hello, Foodies!
+                    </Heading>
+                    <FormControl p={'10'} >
+                        <FormControl.Label fontWeight={'bold'}>
+                            Email
+                        </FormControl.Label>
+                        <Input
+                            label={"Email"}
+                            borderRadius={'xl'}
+                            width={"max"}
+                            height={"10"}
+                            onChangeText={(email) => setEmail(email)} // Set email ke dalam state
+                            value={email}
+                            style={{ backgroundColor: '#D9D9D9' }}
+                        />
+                        <FormControl.Label fontWeight={'bold'} mt={'5'}>
+                            No. Handphone
+                        </FormControl.Label>
+                        <Input
+                            label={"No. Handphone"}
+                            borderRadius={'xl'}
+                            width={"max"}
+                            height={"10"}
+                            // secureTextEntry={true}
+                            onChangeText={(nohp) => setNohp(nohp)} // Set nohp ke dalam state
+                            value={nohp}
+                            style={{ backgroundColor: '#D9D9D9' }}
+                        />
+                        <FormControl.Label fontWeight={'bold'} mt={'5'}>
+                            Password
+                        </FormControl.Label>
+                        <Input
+                            label={"Password"}
+                            borderRadius={'xl'}
+                            width={"max"}
+                            height={"10"}
+                            // secureTextEntry={true}
+                            onChangeText={(password) => setPassword(password)} // Set password ke dalam state
+                            value={password}
+                            style={{ backgroundColor: '#D9D9D9' }}
+                        />
+                        <Button title="Register" type="text" padding={"3"} bg={'#F15A24'} mt={'20'} w={'5/6'} ml={'5'} borderRadius={'full'} onPress={() => { onRegister(); }}>
+                            Register
+                        </Button>
+                    </FormControl>
+                </Box>
+            </ScrollView>
+            
         </Box>
         //     {/* show Alert */}
         //     {showAlert && (

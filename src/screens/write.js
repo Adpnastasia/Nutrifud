@@ -18,51 +18,21 @@ import {
 import { useState } from "react";
 import Header from "../components/header";
 
-const Write = () => {
+const Write = ({ route }) => {
   const [KirimSelesaiAwal, KirimSelesaiSetelah] = useState(false);
+  const { data } = route.params;
 
   return (
     <>
-    <Header/>
-    <NativeBaseProvider>
-      <Box flex={1} bg={"#FFEEDC"}>
-        <Center>
-          <Box width="80%">
-            <FormControl bg="primary.50" p={5} rounded="md" mt={"25"}>
-              <Stack space={4}>
-                <FormControl.Label
-                  fontSize="xl"
-                  color="white"
-                  textAlign="center"
-                  _text={{
-                    fontWeight: "bold",
-                  }}
-                >
-                  Nama Resep
-                </FormControl.Label>
-                <Input
-                  variant="filled"
-                  placeholder="Masukkan Nama Resep"
-                  bg="orange.100"
-                />
-              </Stack>
-              <Stack space={4} mt={5}>
-                <FormControl.Label
-                  fontSize="xl"
-                  color="white"
-                  textAlign="center"
-                  _text={{
-                    fontWeight: "bold",
-                  }}
-                >
-                  Bahan - bahan
-                </FormControl.Label>
-                <TextArea
-                  variant="filled"
-                  placeholder="Masukkan Bahan-bahan"
-                  bg="orange.100"
-                />
-              </Stack>
+      <Header />
+      <NativeBaseProvider>
+        <Box flex={1} bg={"#FFEEDC"}>
+          <Center>
+            <Box width="80%">
+              {/* <Text fontSize="xl">{data.image}</Text> */}
+              <Image source={{ uri: data.image }} alt="Image Data" w="250px" h="250px" borderRadius="150" position="absolute" top="-140px" />
+              <Text fontSize="xl">{data.title}</Text>
+              <FormControl bg="primary.50" p={5} rounded="md" mt={"25"}>
               <Stack space={4} mt={5}>
                 <FormControl.Label
                   fontSize="xl"
@@ -114,10 +84,10 @@ const Write = () => {
                 </Modal.Content>
               </Modal>
             </FormControl>
-          </Box>
-        </Center>
-      </Box>
-    </NativeBaseProvider>
+            </Box>
+          </Center>
+        </Box>
+      </NativeBaseProvider>
     </>
   );
 };

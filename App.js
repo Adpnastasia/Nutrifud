@@ -112,6 +112,7 @@ const App = () => {
           <Stack.Screen name="Login" component={Login} options={noHead} />
           <Stack.Screen name="Register" component={Register} options={noHead} />
           <Stack.Screen name="Profile" component={Profile} options={noHead} />
+          <Stack.Screen name="Write" component={Write} options={noHead} />
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
