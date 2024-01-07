@@ -96,7 +96,17 @@ const Profile = ({ navigation, withBack = true }) => {
                     </Text>
                 </Box>
 
+
                 <Box flexDirection="column" mt={10} mb={10} ml={-170}>
+                    <Box mb={5}>
+                        <Text color="black" fontSize={"sm"}>
+                            Nama
+                        </Text>
+                        <Text color="black" fontSize={"xl"} mt={"2"}>
+                            {profile?.nama}
+                        </Text>
+                    </Box>
+
                     <Box mb={5}>
                         <Text color="black" fontSize={"sm"}>
                             Email

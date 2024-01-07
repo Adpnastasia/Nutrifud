@@ -27,8 +27,9 @@ const Register = ({ navigation }) => {
     };
 
     const onRegister = async () => {
-        if (email && nohp && password) {
+        if (nama && email && nohp && password) {
             const data = {
+                nama: nama,
                 email: email,
                 nohp: nohp,
                 password: password,

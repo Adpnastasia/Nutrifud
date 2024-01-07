@@ -4,6 +4,7 @@ import { loginUser } from "../actions/AuthAction"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Login = ({ navigation }) => {
+    const [nama, setNama] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [showAlert, setShowAlert] = useState(false);
@@ -26,7 +27,7 @@ const Login = ({ navigation }) => {
     };
 
     const login = () => {
-        if (email && password) {
+        if (nama&& email && password) {
             loginUser(email, password)
                 .then((user) => {
                     // Pengguna berhasil login, lakukan sesuatu dengan data pengguna jika perlu
@@ -59,6 +60,18 @@ const Login = ({ navigation }) => {
                     </Heading>
                     <FormControl p={'10'} >
                         <FormControl.Label fontWeight={'bold'}>
+                            Nama
+                        </FormControl.Label>
+                        <Input
+                            label={"Email"}
+                            borderRadius={'xl'}
+                            width={"max"}
+                            height={"10"}
+                            onChangeText={(text) => setNama(text)} // Set nama ke dalam state
+                            value={nama}
+                            style={{ backgroundColor: '#D9D9D9' }}
+                        />
+                        <FormControl.Label fontWeight={'bold'}>
                             Email
                         </FormControl.Label>
                         <Input
@@ -83,7 +96,7 @@ const Login = ({ navigation }) => {
                             value={password}
                             style={{ backgroundColor: '#D9D9D9' }}
                         />
-                        <Button title="Login" type="text" padding={"3"} bg={'#F15A24'} mt={'20'} w={'5/6'} ml={'5'} borderRadius={'full'} onPress={() => login()}>
+                        <Button title="Login" type="text" padding={"3"} bg={'#F15A24'} mt={'10'} w={'5/6'} ml={'5'} borderRadius={'full'} onPress={() => login()}>
                             Login
                         </Button>
                         <FormControl.Label fontWeight={'bold'} mt={'5'} ml={'10'}>
@@ -95,7 +108,7 @@ const Login = ({ navigation }) => {
                     </FormControl>
                 </Box>
             </ScrollView>
-            
+
             {showAlert && (
                 <Modal isOpen={showAlert} onClose={() => toggleAlert()}>
                     <Modal.Content maxWidth="400px" bg={'green.400'}>

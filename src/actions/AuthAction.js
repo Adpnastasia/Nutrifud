@@ -22,9 +22,9 @@ export const registerUser = async (data, password) => {
     }
 };
 
-export const loginUser = async (email, password) => {
+export const loginUser = async (nama, email, password) => {
     try {
-        const success = await FIREBASE.auth().signInWithEmailAndPassword(email, password);
+        const success = await FIREBASE.auth().signInWithEmailAndPassword(nama, email, password);
         const resDB = await FIREBASE.database()
             .ref("/users/" + success.user.uid)
             .once("value");
