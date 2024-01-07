@@ -6,16 +6,16 @@ const Button = (props) => {
     <TouchableOpacity
       style={{
         backgroundColor: "#F15A24",
-        padding: 8,
+        padding: 12,
         alignItems: "center",
         borderRadius: 30,
-        width: 200,
+        width: 250,
       }}
       onPress={props.onPress} // Mengganti "press" menjadi "onPress"
     >
       <Text
         style={{
-          fontSize: 20,
+          fontSize: 18,
           color: "white",
         }}
       >

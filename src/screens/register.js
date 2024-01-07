@@ -8,13 +8,13 @@ import React, { useState } from "react";
 //     ModalBackdrop,
 //     AlertText,
 // } from "@gluestack-ui/themed";
-import { Box, Alert, FormControl,Text,Modal,ModalBackdrop,AlertText,Input,Image,Heading,Button } from "native-base";
+import { Box, Alert, FormControl, Text, Modal, ModalBackdrop, AlertText, Input, Image, Heading, Button, ScrollView } from "native-base";
 // import { Input, Button } from "../components";
 import { registerUser } from "../actions/AuthAction";
 
 
 const Register = ({ navigation }) => {
-    // const [nama, setNama] = useState("");
+    const [nama, setNama] = useState("");
     const [email, setEmail] = useState("");
     const [nohp, setNohp] = useState("");
     const [password, setPassword] = useState("");
@@ -27,8 +27,9 @@ const Register = ({ navigation }) => {
     };
 
     const onRegister = async () => {
-        if ( email && nohp && password) {
+        if (nama && email && nohp && password) {
             const data = {
+                nama: nama,
                 email: email,
                 nohp: nohp,
                 password: password,
@@ -58,56 +59,70 @@ const Register = ({ navigation }) => {
                 h="150"
                 alt="Logo Icon"
                 mt={'50'}
-                ml={'2/6'}
+                alignSelf="center"
             />
-            <Box backgroundColor='white' marginTop={"5"} flex={1} borderTopLeftRadius={'56'} borderTopRightRadius={'56'} alignItems={'center'}>
-                <Heading mt={'10'} fontWeight={'normal'}>
-                    Hello, Foodies!
-                </Heading>
-                <FormControl p={'10'} >
-                    <FormControl.Label fontWeight={'bold'}>
-                        Email
-                    </FormControl.Label>
-                    <Input
-                        label={"Email"}
-                        borderRadius={'xl'}
-                        width={"max"}
-                        height={"10"}
-                        onChangeText={(email) => setEmail(email)} // Set email ke dalam state
-                        value={email}
-                        style={{ backgroundColor: '#D9D9D9' }}
-                    />
-                    <FormControl.Label fontWeight={'bold'} mt={'5'}>
-                        No. Handphone
-                    </FormControl.Label>
-                    <Input
-                        label={"No. Handphone"}
-                        borderRadius={'xl'}
-                        width={"max"}
-                        height={"10"}
-                        // secureTextEntry={true}
-                        onChangeText={(nohp) => setNohp(nohp)} // Set nohp ke dalam state
-                        value={nohp}
-                        style={{ backgroundColor: '#D9D9D9' }}
-                    />
-                    <FormControl.Label fontWeight={'bold'} mt={'5'}>
-                        Password
-                    </FormControl.Label>
-                    <Input
-                        label={"Password"}
-                        borderRadius={'xl'}
-                        width={"max"}
-                        height={"10"}
-                        // secureTextEntry={true}
-                        onChangeText={(password) => setPassword(password)} // Set password ke dalam state
-                        value={password}
-                        style={{ backgroundColor: '#D9D9D9' }}
-                    />
-                    <Button title="Register" type="text" padding={"3"} bg={'#F15A24'} mt={'20'} w={'5/6'} ml={'5'} borderRadius={'full'} onPress={() => { onRegister(); }}>
-                        Register
-                    </Button>
-                </FormControl>
-            </Box>
+            <ScrollView >
+                <Box backgroundColor='white' marginTop={"5"} flex={1} borderTopLeftRadius={'56'} borderTopRightRadius={'56'} alignItems={'center'}>
+                    <Heading mt={'10'} fontWeight={'normal'}>
+                        Hello, Foodies!
+                    </Heading>
+                    <FormControl p={'10'}>
+                        <FormControl.Label fontWeight={'bold'}>
+                            Nama
+                        </FormControl.Label>
+                        <Input
+                            label={"Email"}
+                            borderRadius={'xl'}
+                            width={"max"}
+                            height={"10"}
+                            onChangeText={(nama) => setNama(nama)} // Set nama ke dalam state
+                            value={nama}
+                            style={{ backgroundColor: '#D9D9D9' }}
+                        />
+                        <FormControl.Label fontWeight={'bold'} mt={'3'}>
+                            Email
+                        </FormControl.Label>
+                        <Input
+                            label={"Email"}
+                            borderRadius={'xl'}
+                            width={"max"}
+                            height={"10"}
+                            onChangeText={(email) => setEmail(email)} // Set email ke dalam state
+                            value={email}
+                            style={{ backgroundColor: '#D9D9D9' }}
+                        />
+                        <FormControl.Label fontWeight={'bold'} mt={'3'}>
+                            No. Handphone
+                        </FormControl.Label>
+                        <Input
+                            label={"No. Handphone"}
+                            borderRadius={'xl'}
+                            width={"max"}
+                            height={"10"}
+                            onChangeText={(nohp) => setNohp(nohp)} // Set nohp ke dalam state
+                            value={nohp}
+                            style={{ backgroundColor: '#D9D9D9' }}
+                        />
+                        <FormControl.Label fontWeight={'bold'} mt={'3'}>
+                            Password
+                        </FormControl.Label>
+                        <Input
+                            label={"Password"}
+                            borderRadius={'xl'}
+                            width={"max"}
+                            height={"10"}
+                            secureTextEntry={true}
+                            onChangeText={(password) => setPassword(password)} // Set password ke dalam state
+                            value={password}
+                            style={{ backgroundColor: '#D9D9D9' }}
+                        />
+                        <Button title="Register" type="text" padding={"3"} bg={'#F15A24'} mt={'20'} mb={'3'} w={'5/6'} ml={'5'} borderRadius={'full'} onPress={() => { onRegister(); }}>
+                            Register
+                        </Button>
+                    </FormControl>
+                </Box>
+            </ScrollView>
+
         </Box>
         //     {/* show Alert */}
         //     {showAlert && (
@@ -124,4 +139,3 @@ const Register = ({ navigation }) => {
 };
 
 export default Register;
-

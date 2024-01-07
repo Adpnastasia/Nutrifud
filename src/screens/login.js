@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Alert, Box, Text, FormControl, Heading, AlertText, Modal, ModalBackdrop, Input, Button, Image, VStack } from "native-base";
+import { Alert, Box, Text, FormControl, Heading, AlertText, Modal, ModalBackdrop, Input, Button, Image, VStack, ScrollView } from "native-base";
 import { loginUser } from "../actions/AuthAction"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Login = ({ navigation }) => {
+    const [nama, setNama] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [showAlert, setShowAlert] = useState(false);
@@ -26,7 +27,7 @@ const Login = ({ navigation }) => {
     };
 
     const login = () => {
-        if (email && password) {
+        if (nama&& email && password) {
             loginUser(email, password)
                 .then((user) => {
                     // Pengguna berhasil login, lakukan sesuatu dengan data pengguna jika perlu
@@ -50,52 +51,63 @@ const Login = ({ navigation }) => {
                 h="150"
                 alt="Logo Icon"
                 mt={'50'}
-                ml={'2/6'}
+                alignSelf="center"
             />
-            <Box backgroundColor='white' marginTop={"50"} flex={1} borderTopLeftRadius={'56'} borderTopRightRadius={'56'} alignItems={'center'}>
-                <Heading mt={'10'} fontWeight={'normal'}>
-                    Hello, Foodies!
-                </Heading>
-                <FormControl p={'10'} >
-                    <FormControl.Label fontWeight={'bold'}>
-                        Email
-                    </FormControl.Label>
-                    <Input
-                        label={"Email"}
-                        borderRadius={'xl'}
-                        width={"max"}
-                        height={"10"}
-                        onChangeText={(text) => setEmail(text)} // Set email ke dalam state
-                        value={email}
-                        style={{ backgroundColor: '#D9D9D9' }}
-                    />
-                    <FormControl.Label fontWeight={'bold'} mt={'5'}>
-                        Password
-                    </FormControl.Label>
-                    <Input
-                        label={"Password"}
-                        borderRadius={'xl'}
-                        width={"max"}
-                        height={"10"}
-                        secureTextEntry={true}
-                        onChangeText={(text) => setPassword(text)} // Set password ke dalam state
-                        value={password}
-                        style={{ backgroundColor: '#D9D9D9' }}
-                    />
-
-                    <Button title="Login" type="text" padding={"3"} bg={'#F15A24'} mt={'20'} w={'5/6'} ml={'5'} borderRadius={'full'} onPress={() => login()}>
-                        Login
-                    </Button>
-
-                    <FormControl.Label fontWeight={'bold'} mt={'5'} ml={'10'}>
-                        Don't have account?
-                    </FormControl.Label>
-
-                    <Button title="Login" type="text" padding={"3"} bg={'#F15A24'} mt={'15'} w={'5/6'} ml={'5'} borderRadius={'full'} onPress={() => { navigation.navigate("Register") }}>
-                        Register
-                    </Button>
-                </FormControl>
-            </Box>
+            <ScrollView>
+                <Box backgroundColor='white' marginTop={"50"} flex={1} borderTopLeftRadius={'56'} borderTopRightRadius={'56'} alignItems={'center'}>
+                    <Heading mt={'10'} fontWeight={'normal'}>
+                        Hello, Foodies!
+                    </Heading>
+                    <FormControl p={'10'} >
+                        <FormControl.Label fontWeight={'bold'}>
+                            Nama
+                        </FormControl.Label>
+                        <Input
+                            label={"Email"}
+                            borderRadius={'xl'}
+                            width={"max"}
+                            height={"10"}
+                            onChangeText={(text) => setNama(text)} // Set nama ke dalam state
+                            value={nama}
+                            style={{ backgroundColor: '#D9D9D9' }}
+                        />
+                        <FormControl.Label fontWeight={'bold'} mt={'3'}>
+                            Email
+                        </FormControl.Label>
+                        <Input
+                            label={"Email"}
+                            borderRadius={'xl'}
+                            width={"max"}
+                            height={"10"}
+                            onChangeText={(text) => setEmail(text)} // Set email ke dalam state
+                            value={email}
+                            style={{ backgroundColor: '#D9D9D9' }}
+                        />
+                        <FormControl.Label fontWeight={'bold'} mt={'3'}>
+                            Password
+                        </FormControl.Label>
+                        <Input
+                            label={"Password"}
+                            borderRadius={'xl'}
+                            width={"max"}
+                            height={"10"}
+                            secureTextEntry={true}
+                            onChangeText={(text) => setPassword(text)} // Set password ke dalam state
+                            value={password}
+                            style={{ backgroundColor: '#D9D9D9' }}
+                        />
+                        <Button title="Login" type="text" padding={"3"} bg={'#F15A24'} mt={'10'} w={'5/6'} ml={'5'} borderRadius={'full'} onPress={() => login()}>
+                            Login
+                        </Button>
+                        <FormControl.Label fontWeight={'bold'} mt={'5'} ml={'10'}>
+                            Don't have account?
+                        </FormControl.Label>
+                        <Button title="Login" type="text" padding={"3"} bg={'#F15A24'} mt={'15'} w={'5/6'} ml={'5'} borderRadius={'full'} onPress={() => { navigation.navigate("Register") }}>
+                            Register
+                        </Button>
+                    </FormControl>
+                </Box>
+            </ScrollView>
 
             {showAlert && (
                 <Modal isOpen={showAlert} onClose={() => toggleAlert()}>

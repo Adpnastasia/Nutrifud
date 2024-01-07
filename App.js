@@ -17,6 +17,7 @@ import Login from "./src/screens/login";
 import Register from "./src/screens/register";
 import Profile from "./src/screens/profile";
 import Splash from "./src/screens/splash";
+import EditProfile from "./src/screens/editProfile";
 
 // Navigator Declaration
 const Stack = createNativeStackNavigator();
@@ -109,6 +110,7 @@ const App = () => {
           <Stack.Screen name="Tabs" component={Tabs} options={noHead} />
           <Stack.Screen name="Recipe" component={Recipe} options={noHead} />
           <Stack.Screen name="Profile" component={Profile} options={noHead} />
+          <Stack.Screen name="EditProfile" component={EditProfile} options={noHead} />
           <Stack.Screen name="DetailKategori" component={DetailKategori} options={noHead} />
         </Stack.Navigator>
       </NavigationContainer>
