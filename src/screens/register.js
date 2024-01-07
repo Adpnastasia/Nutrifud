@@ -8,13 +8,13 @@ import React, { useState } from "react";
 //     ModalBackdrop,
 //     AlertText,
 // } from "@gluestack-ui/themed";
-import { Box, Alert, FormControl,Text,Modal,ModalBackdrop,AlertText,Input,Image,Heading,Button, ScrollView } from "native-base";
+import { Box, Alert, FormControl, Text, Modal, ModalBackdrop, AlertText, Input, Image, Heading, Button, ScrollView } from "native-base";
 // import { Input, Button } from "../components";
 import { registerUser } from "../actions/AuthAction";
 
 
 const Register = ({ navigation }) => {
-    // const [nama, setNama] = useState("");
+    const [nama, setNama] = useState("");
     const [email, setEmail] = useState("");
     const [nohp, setNohp] = useState("");
     const [password, setPassword] = useState("");
@@ -27,7 +27,7 @@ const Register = ({ navigation }) => {
     };
 
     const onRegister = async () => {
-        if ( email && nohp && password) {
+        if (email && nohp && password) {
             const data = {
                 email: email,
                 nohp: nohp,
@@ -65,7 +65,19 @@ const Register = ({ navigation }) => {
                     <Heading mt={'10'} fontWeight={'normal'}>
                         Hello, Foodies!
                     </Heading>
-                    <FormControl p={'10'} >
+                    <FormControl p={'10'}>
+                        <FormControl.Label fontWeight={'bold'}>
+                            Nama
+                        </FormControl.Label>
+                        <Input
+                            label={"Email"}
+                            borderRadius={'xl'}
+                            width={"max"}
+                            height={"10"}
+                            onChangeText={(nama) => setNama(nama)} // Set nama ke dalam state
+                            value={nama}
+                            style={{ backgroundColor: '#D9D9D9' }}
+                        />
                         <FormControl.Label fontWeight={'bold'}>
                             Email
                         </FormControl.Label>
@@ -86,7 +98,6 @@ const Register = ({ navigation }) => {
                             borderRadius={'xl'}
                             width={"max"}
                             height={"10"}
-                            // secureTextEntry={true}
                             onChangeText={(nohp) => setNohp(nohp)} // Set nohp ke dalam state
                             value={nohp}
                             style={{ backgroundColor: '#D9D9D9' }}
@@ -99,7 +110,7 @@ const Register = ({ navigation }) => {
                             borderRadius={'xl'}
                             width={"max"}
                             height={"10"}
-                            // secureTextEntry={true}
+                            secureTextEntry={true}
                             onChangeText={(password) => setPassword(password)} // Set password ke dalam state
                             value={password}
                             style={{ backgroundColor: '#D9D9D9' }}
@@ -110,7 +121,7 @@ const Register = ({ navigation }) => {
                     </FormControl>
                 </Box>
             </ScrollView>
-            
+
         </Box>
         //     {/* show Alert */}
         //     {showAlert && (
