@@ -46,9 +46,9 @@ const Recipe = ({ route }) => {
     <Box flex={1} bg="#FFEEDC">
       <Header withBack="true" />
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 25 }}>
-        <TouchableOpacity onPress={handleIcon1Press} style={{ alignItems: 'flex-end' }}>
+        {/* <TouchableOpacity onPress={handleIcon1Press} style={{ alignItems: 'flex-end' }}>
           <Ionicons name={icon1} size={35} color="#F15A24" />
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         <TouchableOpacity onPress={handleIconPress} style={{ alignItems: 'flex-start' }}>
           <Ionicons name={icon} size={35} color="#F15A24" />
         </TouchableOpacity>

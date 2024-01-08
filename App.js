@@ -16,6 +16,9 @@ import React from "react";
 import Login from "./src/screens/login";
 import Register from './src/screens/register'
 import Profile from "./src/screens/profile";
+import Splash from "./src/screens/splash"
+import EditReview from "./src/screens/EditReview"
+import EditProfile from "./src/screens/editProfile"
 
 // Navigator Declaration
 const Stack = createNativeStackNavigator();
@@ -101,7 +104,7 @@ const App = () => {
     <NativeBaseProvider>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Welcome" component={Welcome} options={noHead} />
+          {/* <Stack.Screen name="Welcome" component={Welcome} options={noHead} />
           <Stack.Screen name="Tabs" component={Tabs} options={noHead} />
           <Stack.Screen name="Recipe" component={Recipe} options={noHead} />
           <Stack.Screen
@@ -112,7 +115,17 @@ const App = () => {
           <Stack.Screen name="Login" component={Login} options={noHead} />
           <Stack.Screen name="Register" component={Register} options={noHead} />
           <Stack.Screen name="Profile" component={Profile} options={noHead} />
-          <Stack.Screen name="Write" component={Write} options={noHead} />
+          <Stack.Screen name="Write" component={Write} options={noHead} /> */}
+          <Stack.Screen name="Splash" component={Splash} options={noHead} />
+          <Stack.Screen name="Welcome" component={Welcome} options={noHead} />
+          <Stack.Screen name="Login" component={Login} options={noHead} />
+          <Stack.Screen name="Register" component={Register} options={noHead} />
+          <Stack.Screen name="Tabs" component={Tabs} options={noHead} />
+          <Stack.Screen name="Recipe" component={Recipe} options={noHead} />
+          <Stack.Screen name="Profile" component={Profile} options={noHead} />
+          <Stack.Screen name="DetailKategori" component={DetailKategori} options={noHead} />
+          <Stack.Screen name="EditReview" component={EditReview} options={noHead} />
+          <Stack.Screen name="EditProfile" component={EditProfile} options={noHead} />
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>

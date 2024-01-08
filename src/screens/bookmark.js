@@ -57,9 +57,9 @@ const Bookmark = () => {
               <Heading lineHeight="md" fontSize="md">
                 {item.title}
               </Heading>
-              <Button bg="white" onPress={() => navigateToReview(item)} >
+              {/* <Button bg="white" onPress={() => navigateToReview(item)} >
                 <Ionicons name="pencil-outline" />
-              </Button>
+              </Button> */}
               <Button bg="white" onPress={() => deleteBookmark(item.id)}>
                 <Ionicons name="trash-outline" />
               </Button>
