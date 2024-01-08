@@ -11,6 +11,8 @@ import Recipe from "./screens/recipe";
 import Welcome from "./screens/welcome";
 
 import DetailKategori from "./screens/detailKategori";
+import RecipesForCategory from "./screens/RecipesForCategory";
+import EditReview from "./screens/EditReview";
 import Review from "./screens/review";
 import React from "react";
 import Login from "./screens/login";
@@ -106,6 +108,8 @@ const App = () => {
           <Stack.Screen name="Recipe" component={Recipe} options={noHead} />
           <Stack.Screen name="Profile" component={Profile} options={noHead} />
           <Stack.Screen name="DetailKategori" component={DetailKategori} options={noHead} />
+          <Stack.Screen name="RecipesForCategory" component={RecipesForCategory} options={noHead} />
+          <Stack.Screen name="EditReview" component={EditReview} options={noHead} />
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
