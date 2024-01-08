@@ -44,7 +44,7 @@ const Welcome = () => {
           
           <Button
             text="Let's Cook!"
-            onPress={() => navigation.navigate('Tabs')}
+            onPress={() => navigation.navigate('Login')}
           />
         </Box>
       </View>

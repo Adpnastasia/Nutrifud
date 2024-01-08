@@ -11,10 +11,13 @@ import {
   Center,
   HStack,
 } from 'native-base';
+import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '../components/header';
 
 const Kalkulator = () => {
+  const navigation = useNavigation();
+
   const [tinggi, setTinggi] = useState('');
   const [berat, setBerat] = useState('');
   const [kategoriBMI, setKategoriBMI] = useState('');
@@ -25,11 +28,11 @@ const Kalkulator = () => {
       const tinggiCM = tinggi / 100;
       const bmi = (berat / (tinggiCM * tinggiCM)).toFixed(2);
       const kategori = hasilKategoriBMI(bmi);
-  
+
       setHasil(bmi);
-      setKategoriBMI(kategori); 
+      setKategoriBMI(kategori);
     }
-  };  
+  };
 
   const resetFields = () => {
     setTinggi('');
@@ -38,33 +41,38 @@ const Kalkulator = () => {
     setHasil(null);
   };
 
+  const handleShowRecipes = () => {
+    // Navigate to RecommendedRecipes with the calculated category
+    navigation.navigate('RecipesForCategory', { kategoriBMI: kategoriBMI.category });
+  };
+
   const hasilKategoriBMI = (bmi) => {
     if (bmi < 18.5) {
-      return { category: 'Kekurangan Berat Badan', title: ['Tinggi Protein'] };
+      return { category: 'Underweight', title: ['High Protein', 'High Fiber', 'Healthy Fats'] };
     } else if (bmi >= 18.5 && bmi < 24) {
-      return { category: 'Berat Badan Normal', title: ['Rendah Karbo', 'Tinggi Protein', 'Rendah Lemak'] };
+      return { category: 'Normal', title: ['Low Carbs', 'High Protein', 'Low Fat', 'High Fiber', 'Healthy Fats'] };
     } else {
-      return { category: 'Kelebihan Berat Badan', title: ['Rendah Lemak', 'Rendah Karbo'] };
+      return { category: 'Overweight', title: ['Low Fat', 'Low Carbs', 'High Protein', 'High Fiber'] };
     }
   };
 
   return (
     <>
-    <Header/>
-    <Box bg="#FFEEDB" flex={1}>
-      <SafeAreaView>
-        <ScrollView>
-          <NativeBaseProvider>
+      <Header />
+      <Box bg="#FFEEDB" flex={1}>
+        <SafeAreaView>
+          <ScrollView>
+            <NativeBaseProvider>
               <Box p={4} bg='white'>
                 <Center>
                   <Heading mb={4} color='#ED7D31'>
-                    BMI Kalkulator
+                    BMI Calculator
                   </Heading>
                 </Center>
                 <FormControl>
-                  <FormControl.Label>Tinggi Badan</FormControl.Label>
+                  <FormControl.Label>Height</FormControl.Label>
                   <Input
-                    placeholder='Tinggi Badan (cm)'
+                    placeholder='Height (cm)'
                     value={tinggi}
                     onChangeText={(text) => setTinggi(text)}
                     mb={2}
@@ -72,9 +80,9 @@ const Kalkulator = () => {
                   />
                 </FormControl>
                 <FormControl>
-                  <FormControl.Label>Berat Badan</FormControl.Label>
+                  <FormControl.Label>Weight</FormControl.Label>
                   <Input
-                    placeholder='Berat Badan (kg)'
+                    placeholder='Weight (kg)'
                     value={berat}
                     onChangeText={(text) => setBerat(text)}
                     mb={2}
@@ -90,7 +98,7 @@ const Kalkulator = () => {
                     borderRadius={15}
                     height={46}
                   >
-                    <Text color='white'>Hitung BMI</Text>
+                    <Text color='white'>Calculate BMI</Text>
                   </Button>
                   <Button
                     onPress={resetFields}
@@ -108,21 +116,32 @@ const Kalkulator = () => {
                 {hasil !== null && (
                   <Box mt={4} p={4} bg='#FFD699' borderRadius={15}>
                     <Text color='#333' fontSize="md" fontWeight='bold'>
-                      BMI Anda: {hasil}
+                      BMI: {hasil}
                     </Text>
                     <Text color='#333' fontSize="md" fontWeight='bold' mt={2}>
-                      Kategori: {kategoriBMI.category}
+                      Category: {kategoriBMI.category}
                     </Text>
                     <Text color='#333' fontSize="md" fontWeight='bold' mt={2}>
-                      Rekomendasi Kategori Resep: {kategoriBMI.title.join(', ')}
+                      Recommended Recipes Category: {kategoriBMI.title.join(', ')}
                     </Text>
+                    
+                    {/* Button to navigate to RecommendedRecipes */}
+                    <Button
+                      onPress={handleShowRecipes}
+                      backgroundColor='#ED7D31'
+                      mt={4}
+                      borderRadius={15}
+                      height={46}
+                    >
+                      <Text color='white'>Show Recommended Recipes</Text>
+                    </Button>
                   </Box>
                 )}
               </Box>
-          </NativeBaseProvider>
-        </ScrollView>
-      </SafeAreaView>
-    </Box>
+            </NativeBaseProvider>
+          </ScrollView>
+        </SafeAreaView>
+      </Box>
     </>
   );
 };

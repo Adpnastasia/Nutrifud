@@ -3,19 +3,23 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { NativeBaseProvider, Text } from "native-base";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import Home from "./src/screens/home"
-import Bookmark from "./src/screens/bookmark";
-import Calculator from "./src/screens/calculator";
-import Category from "./src/screens/kategori";
-import Recipe from "./src/screens/recipe";
-import Write from "./src/screens/write";
-import Welcome from "./src/screens/welcome";
-import DetailKategori from "./src/screens/detailKategori";
-import Review from "./src/screens/review";
+
+import Home from "./screens/home"
+import Bookmark from "./screens/bookmark";
+import Calculator from "./screens/calculator";
+import Category from "./screens/kategori";
+import Recipe from "./screens/recipe";
+import Welcome from "./screens/welcome";
+
+import DetailKategori from "./screens/detailKategori";
+import RecipesForCategory from "./screens/RecipesForCategory";
+import EditReview from "./screens/EditReview";
+import Review from "./screens/review";
 import React from "react";
-import Login from "./src/screens/login";
-import Register from './src/screens/register'
-import Profile from "./src/screens/profile";
+import Login from "./screens/login";
+import Register from "./screens/register";
+import Profile from "./screens/profile";
+import Splash from "./screens/splash";
 
 // Navigator Declaration
 const Stack = createNativeStackNavigator();
@@ -36,22 +40,17 @@ const Tabs = () => {
             case "Bookmark":
               iconName = "bookmark-outline";
               break;
-            case "Write":
-              iconName = "add-circle-outline";
-              break;
             case "Category":
               iconName = "apps-outline";
               break;
             case "BMI":
               iconName = "calculator-outline";
               break;
-
             case "Review":
               iconName = "book-outline";
               break;
             default:
               iconName = "help-circle-outline";
-
           }
           return (
             <Ionicons
@@ -73,14 +72,15 @@ const Tabs = () => {
           shadowColor: '#F15A24',
           elevation: 4,
         },
-
         tabBarLabelStyle: {
           marginBottom: 3,
         },
         tabBarLabel: ({ children, color, focused }) => {
           return (
-            <Text 
-              color={focused ? "#F15A24" : color} mb={3}>
+            <Text
+              color={focused ? "#F15A24" : color}
+              style={{ marginBottom: 3 }}
+            >
               {children}
             </Text>
           );
@@ -89,7 +89,6 @@ const Tabs = () => {
     >
       <Tab.Screen name="Home" component={Home} options={noHead} />
       <Tab.Screen name="Bookmark" component={Bookmark} options={noHead} />
-      <Tab.Screen name="Write" component={Write} options={noHead} />
       <Tab.Screen name="Category" component={Category} options={noHead} />
       <Tab.Screen name="BMI" component={Calculator} options={noHead} />
       <Tab.Screen name="Review" component={Review} options={noHead} />
@@ -102,6 +101,7 @@ const App = () => {
     <NativeBaseProvider>
       <NavigationContainer>
         <Stack.Navigator>
+          <Stack.Screen name="Splash" component={Splash} options={noHead} />
           <Stack.Screen name="Welcome" component={Welcome} options={noHead} />
           <Stack.Screen name="Login" component={Login} options={noHead} />
           <Stack.Screen name="Register" component={Register} options={noHead} />
@@ -109,6 +109,8 @@ const App = () => {
           <Stack.Screen name="Recipe" component={Recipe} options={noHead} />
           <Stack.Screen name="Profile" component={Profile} options={noHead} />
           <Stack.Screen name="DetailKategori" component={DetailKategori} options={noHead} />
+          <Stack.Screen name="RecipesForCategory" component={RecipesForCategory} options={noHead} />
+          <Stack.Screen name="EditReview" component={EditReview} options={noHead} />
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>

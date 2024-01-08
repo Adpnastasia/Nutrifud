@@ -1,15 +1,30 @@
 import React from "react";
-import { Image, Text, FlatList, Box } from "native-base";
+import { Image, Text, FlatList, Box, IconButton } from "native-base";
 import { TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import kategori from "../datas/kategori";
-import Header from '../components/header';
+import kategori from '../datas/kategori'
+import HeaderPro from "../components/headerpro";
+import Icon from 'react-native-vector-icons/FontAwesome'; // Import the FontAwesome icon
 
 const Kategori = () => {
   const navigation = useNavigation();
 
   const navigateToDetailKategori = (selectedCategory) => {
-    navigation.navigate("DetailKategori", { kategori: selectedCategory });
+    navigation.navigate("DetailKategori", { kategori: selectedCategory, allKategori: kategori });
+  };
+
+  const renderHeader = () => {
+    return (
+      <Box flexDirection="row" alignItems="center" mt={2} mb={2}>
+        <IconButton
+          onPress={() => navigation.goBack()} // Go back when the button is pressed
+          icon={<Icon name="arrow-left" size={24} color="#ED7D31" />} // Arrow back icon
+        />
+        <Text color="#ED7D31" fontWeight="bold" fontSize="xl" ml={2}>
+          All Category
+        </Text>
+      </Box>
+    );
   };
 
   const renderItem = ({ item }) => {
@@ -35,6 +50,7 @@ const Kategori = () => {
               {item.kategori}
             </Text>
           </Box>
+          
         </Box>
       </TouchableOpacity>
     );
@@ -42,11 +58,9 @@ const Kategori = () => {
 
   return (
     <>
-      <Header/>
+      <HeaderPro />
       <Box bg="#FFEEDB" flex={1}>
-        <Box alignItems="center" mt="3" mb="3">
-            <Text color="#ED7D31" fontWeight="bold" fontSize="xl">Kategori Resep</Text>
-        </Box>
+        {renderHeader()}
         <FlatList
           data={kategori}
           renderItem={renderItem}
@@ -54,6 +68,8 @@ const Kategori = () => {
           showsVerticalScrollIndicator={false}
           numColumns={2}
         />
+        <Box style={{ marginTop: 100 }}>
+        </Box>
       </Box>
     </>
   );
