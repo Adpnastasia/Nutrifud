@@ -94,7 +94,7 @@ const Tabs = () => {
       {/* <Tab.Screen name="Write" component={Write} options={noHead} /> */}
       <Tab.Screen name="Category" component={Category} options={noHead} />
       <Tab.Screen name="BMI" component={Calculator} options={noHead} />
-      <Tab.Screen name="Review" component={Review} options={noHead} />
+      {/* <Tab.Screen name="Review" component={Review} options={noHead} /> */}
     </Tab.Navigator>
   );
 };
