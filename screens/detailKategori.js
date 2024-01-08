@@ -5,6 +5,12 @@ import Icon from 'react-native-vector-icons/FontAwesome'; // Import the FontAwes
 import datas from "../datas/datas1";
 
 const DetailKategori = ({ route }) => {
+  // const navigation = useNavigation();
+
+  // const navigateToRecipe = (selectedRecipe) => {
+  //   navigation.navigate("Recipe", { Recipe: selectedRecipe });
+  // };
+
   const { kategori } = route.params;
   const navigation = useNavigation();
 

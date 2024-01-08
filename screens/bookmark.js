@@ -4,7 +4,6 @@ import { Box, Heading, Image, Text, Button, HStack, VStack } from 'native-base';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
-import Header from '../components/header';
 
 const Bookmark = () => {
   const navigation = useNavigation();

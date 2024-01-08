@@ -22,7 +22,7 @@ const Home = () => {
     >
       <Box ml={"4"} position="relative">
         <Heading
-          fontSize={"sm"}
+          fontSize={"xs"}
           lineHeight={"xs"}
           ellipsizeMode="tail"
           numberOfLines={2}
