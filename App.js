@@ -62,15 +62,14 @@ const Tabs = () => {
             />
           );
         },
-        tabBarIconStyle: { marginTop: 10 },
+        tabBarIconStyle: { marginTop: 10},
         tabBarStyle: {
           position: 'absolute',
           bottom: 15,
           left: 10,
           right: 10,
-          elevation: 0,
           borderRadius: 15,
-          height: 80,
+          height: 70,
           shadowColor: '#F15A24',
           elevation: 4,
         },

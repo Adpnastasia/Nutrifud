@@ -65,7 +65,7 @@ import { Image, Text, FlatList, Box, IconButton } from "native-base";
 import { TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import kategori from '../datas/kategori'
-import HeaderPro from "../components/headerpro";
+import Header from "../components/header";
 import Icon from 'react-native-vector-icons/FontAwesome'; // Import the FontAwesome icon
 
 const Kategori = () => {
@@ -120,19 +120,19 @@ const Kategori = () => {
 
   return (
     <>
-      <HeaderPro />
-      <Box bg="#FFEEDB" flex={1}>
-        {renderHeader()}
-        <FlatList
-          data={kategori}
-          renderItem={renderItem}
-          keyExtractor={(item) => item.id.toString()}
-          showsVerticalScrollIndicator={false}
-          numColumns={2}
-        />
-        <Box style={{ marginTop: 100 }}>
+        <Header/>
+        <Box bg="#FFEEDB" flex={1}>
+          {renderHeader()}
+          <FlatList
+            data={kategori}
+            renderItem={renderItem}
+            keyExtractor={(item) => item.id.toString()}
+            showsVerticalScrollIndicator={false}
+            numColumns={2}
+          />
+          <Box style={{ marginTop: 100 }}>
+          </Box>
         </Box>
-      </Box>
     </>
   );
 };

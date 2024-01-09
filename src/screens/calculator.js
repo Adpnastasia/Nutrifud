@@ -134,10 +134,8 @@ import {
   Box,
   Heading,
   Input,
-  Button,
   Text,
   FormControl,
-  NativeBaseProvider,
   ScrollView,
   Center,
   HStack,
@@ -145,6 +143,7 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '../components/header';
+import Button from '../components/button';
 
 const Kalkulator = () => {
   const navigation = useNavigation();
@@ -190,10 +189,20 @@ const Kalkulator = () => {
   return (
     <>
       <Header />
-      <Box bg="#FFEEDB" flex={1}>
-        <SafeAreaView>
-          <ScrollView>
-            <NativeBaseProvider>
+      <ScrollView flex={1} backgroundColor="#FFEEDC">
+        <Box
+            alignSelf={"center"}
+            justifyContent={"center"}
+            backgroundColor={"white"}
+            width={"85%"}
+            padding={2}
+            borderRadius={10}
+            shadowOpacity={10}
+            elevation={15}
+            flexGrow={1} 
+            mt={4}
+            mb={8}
+            >
               <Box p={4} bg='white'>
                 <Center>
                   <Heading mb={4} color='#ED7D31'>
@@ -221,16 +230,27 @@ const Kalkulator = () => {
                   />
                 </FormControl>
 
-                <HStack space={2} mt={5}>
+                <Box
+                  mt={5}
+                  mb={2}
+                  width={"100%"}
+                  alignItems={"center"}>
                   <Button
                     onPress={hitungBMI}
                     backgroundColor='#ED7D31'
                     flex={1}
                     borderRadius={15}
                     height={46}
+                    text="Calculate BMI"
                   >
-                    <Text color='white'>Calculate BMI</Text>
                   </Button>
+                </Box>
+
+                <Box
+                  mt={2}
+                  mb={2}
+                  width={"100%"}
+                  alignItems={"center"}>
                   <Button
                     onPress={resetFields}
                     backgroundColor='white'
@@ -239,10 +259,9 @@ const Kalkulator = () => {
                     borderColor="#A9A9A9"
                     borderWidth={1}
                     height={46}
-                  >
-                    <Text color='black'>Reset</Text>
+                    text="Reset">
                   </Button>
-                </HStack>
+                </Box>
 
                 {hasil !== null && (
                   <Box mt={4} p={4} bg='#FFD699' borderRadius={15}>
@@ -258,10 +277,8 @@ const Kalkulator = () => {
                   </Box>
                 )}
               </Box>
-            </NativeBaseProvider>
+          </Box>
           </ScrollView>
-        </SafeAreaView>
-      </Box>
     </>
   );
 };

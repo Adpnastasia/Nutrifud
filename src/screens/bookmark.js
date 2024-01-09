@@ -47,28 +47,37 @@ const Bookmark = () => {
 
   const renderitem = ({ item }) => {
     return (
-      <Box bg="#FFEEDC" p="5" borderBottomColor="orange.400" borderBottomWidth={1} flexDirection="row">
-        <Box flex={1} mr="5">
-          <Image source={{ uri: item.image }} alt="Image Data" w="100" h="50" borderRadius="xl" />
-        </Box>
-        <Box flex={2} justifyContent="flex-end">
-          <VStack>
-            <HStack justifyContent="flex-end">
-              <Heading lineHeight="md" fontSize="md">
-                {item.title}
-              </Heading>
-              {/* <Button bg="white" onPress={() => navigateToReview(item)} >
-                <Ionicons name="pencil-outline" />
-              </Button> */}
-              <Button bg="white" onPress={() => deleteBookmark(item.id)}>
-                <Ionicons name="trash-outline" />
-              </Button>
-            </HStack>
-          </VStack>
-        </Box>
+      <Box bg="#FFEEDC" p="5" borderBottomColor="orange.400" borderBottomWidth={1} flexDirection="row" alignSelf="stretch">
+        <VStack>
+          <Box
+            flexDirection="row"
+            alignItems="flex-start"
+            justifyContent={"space-between"}
+            backgroundColor={"white"}
+            width={350} 
+            padding={2}
+            borderRadius={10}
+            shadowOpacity={10}
+            elevation={15}
+            flex={2}>
+              <HStack space={2} alignItems="center" justifyContent="space-between" width="100%">
+                <HStack>
+                  <Image source={{ uri: item.image }} alt="Image Data" w="100" h="50" borderRadius="xl" alignSelf="flex-start" />
+                  <VStack flexShrink={1} ml={2} justifyContent="center">
+                    <Heading lineHeight="md" fontSize="md" maxWidth={200} numberOfLines={2}>
+                      {item.title}
+                    </Heading>
+                  </VStack>
+                </HStack>
+                <Button bg="white" onPress={() => deleteBookmark(item.id)} px={2} py={2}>
+                  <Ionicons name="trash-outline" />
+                </Button>
+              </HStack>
+          </Box>
+        </VStack>
       </Box>
     );
-  };
+  };  
 
   return (
     <>
