@@ -100,6 +100,7 @@ const Kategori = () => {
           overflow="hidden"
           borderColor="#D3B292" 
           borderWidth={1}
+          justifyContent="center"
         >
           <Image
             source={{ uri: item.image }}

@@ -14,7 +14,7 @@ import DetailKategori from "./src/screens/detailKategori";
 import Review from "./src/screens/review";
 import React from "react";
 import Login from "./src/screens/login";
-import Register from './src/screens/register'
+import Register from "./src/screens/register";
 import Profile from "./src/screens/profile";
 import Splash from "./src/screens/splash"
 import EditReview from "./src/screens/EditReview"
@@ -103,18 +103,6 @@ const App = () => {
     <NativeBaseProvider>
       <NavigationContainer>
         <Stack.Navigator>
-          {/* <Stack.Screen name="Welcome" component={Welcome} options={noHead} />
-          <Stack.Screen name="Tabs" component={Tabs} options={noHead} />
-          <Stack.Screen name="Recipe" component={Recipe} options={noHead} />
-          <Stack.Screen
-            name="DetailKategori"
-            component={DetailKategori}
-            options={noHead}
-          />
-          <Stack.Screen name="Login" component={Login} options={noHead} />
-          <Stack.Screen name="Register" component={Register} options={noHead} />
-          <Stack.Screen name="Profile" component={Profile} options={noHead} />
-          <Stack.Screen name="Write" component={Write} options={noHead} /> */}
           <Stack.Screen name="Splash" component={Splash} options={noHead} />
           <Stack.Screen name="Welcome" component={Welcome} options={noHead} />
           <Stack.Screen name="Login" component={Login} options={noHead} />

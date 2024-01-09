@@ -56,3 +56,27 @@ export const logoutUser = () => {
         });
 };
 
+// export const addPhoto = async (data) => {
+//     try {
+//       // Ambil data yg sudah login dari fungsi 'getData'
+//       const userData = await getData("user");
+  
+//       if (userData) {
+//         // Tambah note sesuai uid
+//         const dataBaru = {
+//           ...data,
+//           uid: userData.uid,
+//         };
+  
+//         await FIREBASE.database()
+//           .ref("photos/" + userData.uid)
+//           .push(dataBaru);
+  
+//         console.log("Photo added successfully");
+//       } else {
+//         Alert.alert("Error", "Login Terlebih Dahulu");
+//       }
+//     } catch (error) {
+//       throw error;
+//     }
+//   };

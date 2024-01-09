@@ -32,30 +32,72 @@ const datas = [
     image: "https://i.pinimg.com/564x/e6/74/1e/e6741ea003494ca3bfc3e60622bf5e3a.jpg",
     time: "10 min",
     calories: "178 cal",
+<<<<<<< HEAD
     ingredients: ["Bread", "Egg", "Avocado", "Oregano",],
     kategori: ["Breakfast", "Vegan", "Healthy Fats"],
+=======
+    image:
+      "https://i.pinimg.com/564x/e6/74/1e/e6741ea003494ca3bfc3e60622bf5e3a.jpg",
+    ingredients: [
+      "Bread",
+      "Egg",
+      "Avocado",
+      "Oregano",
+    ],
+>>>>>>> 960547831f5f849a763f520e43551364adaf33c0
     content: content,
   },
   {
     id: 4,
     title: "Healthy Pasta",
     description: "Nice nice",
+<<<<<<< HEAD
     image: "https://i.pinimg.com/564x/6a/b3/e8/6ab3e82ec375d04ee02c0f3db7439c51.jpg",
     time: "15 min",
     calories: "221 cal",
     ingredients: ["Pasta", "Mushroom", "Onion", "White Sauce",],
     kategori: ["Breakfast", "Vegan"],
+=======
+    image:
+      "https://i.pinimg.com/564x/6a/b3/e8/6ab3e82ec375d04ee02c0f3db7439c51.jpg",
+    time: "15 min",
+    calories: "221 cal",
+    image:
+      "https://i.pinimg.com/564x/6a/b3/e8/6ab3e82ec375d04ee02c0f3db7439c51.jpg",
+    ingredients: [
+      "Pasta",
+      "Mushroom",
+      "Onion",
+      "White Sauce",
+    ],
+>>>>>>> 960547831f5f849a763f520e43551364adaf33c0
     content: content,
   },
   {
     id: 5,
     title: "Protein packed Chicken and Avocado Macro bowl",
     description: "Very Good",
+<<<<<<< HEAD
     image: "https://i.pinimg.com/564x/5c/30/b9/5c30b9dae570613a7a2af2b06aa79b88.jpg",
     time: "20 min",
     calories: "315 cal",
     ingredients: ["Chicken", "Avocado", "Broth", "Salad",],
     kategori: ["High Protein", "Dinner", "Healthy Fats"],
+=======
+    image:
+      "https://i.pinimg.com/564x/5c/30/b9/5c30b9dae570613a7a2af2b06aa79b88.jpg",
+    description: "Very Good",
+    time: "20 min",
+    calories: "315 cal",
+    image:
+      "https://i.pinimg.com/564x/ab/7c/97/ab7c978def53dab12dd788a3c4082bbe.jpg",
+    ingredients: [
+      "Chicken",
+      "Avocado",
+      "Broth",
+      "Salad",
+    ],
+>>>>>>> 960547831f5f849a763f520e43551364adaf33c0
     content: content,
   },
   {
@@ -335,4 +377,9 @@ const datas = [
   },
 ];
 
+<<<<<<< HEAD
 export default datas;
+=======
+export default datas;
+
+>>>>>>> 960547831f5f849a763f520e43551364adaf33c0
