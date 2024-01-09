@@ -76,7 +76,7 @@
 //             // Update the user data in the Realtime Database
 //             const user = FIREBASE.auth().currentUser;
 //             if (user) {
-//                 await FIREBASE.database().ref(`users/${user.uid}`).update({
+//                 await FIREBASE.database().ref('users / ${ user.uid }').update({
 //                     profileImage: downloadURL,
 //                 });
 //             }
@@ -394,7 +394,6 @@ const EditProfile = ({ route, navigation, withBack = true }) => {
         }
     };
 
-
     const uploadImage = async () => {
         setUploading(true);
 
@@ -477,6 +476,7 @@ const EditProfile = ({ route, navigation, withBack = true }) => {
 
     const onEditProfile = async () => {
         try {
+
             if (email && nohp && nama) {
                 const data = {
                     email: email,
@@ -561,7 +561,6 @@ const EditProfile = ({ route, navigation, withBack = true }) => {
                                     alt="profile"
                                 />
                             )}
-
                             <Box
                                 backgroundColor={"white"}
                                 width={70}
@@ -573,6 +572,7 @@ const EditProfile = ({ route, navigation, withBack = true }) => {
                                 justifyContent={"center"}>
                                 <TouchableOpacity onPress={pickImage}>
                                     <Ionicons name="create-outline" size={35} color={"#F15A24"} />
+
                                 </TouchableOpacity>
                             </Box>
                         </Box>
