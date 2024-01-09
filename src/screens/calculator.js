@@ -255,17 +255,6 @@ const Kalkulator = () => {
                     <Text color='#333' fontSize="md" fontWeight='bold' mt={2}>
                       Recommended Recipes Category: {kategoriBMI.title.join(', ')}
                     </Text>
-                    
-                    {/* Button to navigate to RecommendedRecipes */}
-                    <Button
-                      onPress={handleShowRecipes}
-                      backgroundColor='#ED7D31'
-                      mt={4}
-                      borderRadius={15}
-                      height={46}
-                    >
-                      <Text color='white'>Show Recommended Recipes</Text>
-                    </Button>
                   </Box>
                 )}
               </Box>
